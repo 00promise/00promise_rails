@@ -95,8 +95,9 @@ ActiveRecord::Schema.define(:version => 20130908061033) do
     t.string   "type_name"
     t.integer  "type_code"
     t.string   "district"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "election_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
