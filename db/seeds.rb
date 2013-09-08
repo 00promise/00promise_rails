@@ -3,7 +3,23 @@
 # Do not hesitate to tweak this to your needs
 
 AdminUser.create([
-  { :email => "admin@example.com", :encrypted_password => "$2a$10$kchGDcWaHFLHgY1LM8nMNeTmNSjzk3.tGghYzfMsoTDRiRdlgGUFi", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 0, :current_sign_in_at => nil, :last_sign_in_at => nil, :current_sign_in_ip => nil, :last_sign_in_ip => nil, :created_at => "2013-09-08 06:46:19", :updated_at => "2013-09-08 06:46:19" }
+  { :email => "admin@example.com", :encrypted_password => "$2a$10$5XZsoLdgmVncdD4mSuQlU.nSpI5R.8M/D/1a/NcPE6lqMW/Y3rJSe", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 0, :current_sign_in_at => nil, :last_sign_in_at => nil, :current_sign_in_ip => nil, :last_sign_in_ip => nil, :created_at => "2013-09-08 10:24:27", :updated_at => "2013-09-08 10:24:27" }
+], :without_protection => true )
+
+
+
+Manifesto.create([
+  { :candidate_id => nil, :title => nil, :description => nil, :created_at => nil, :updated_at => nil }
+], :without_protection => true )
+
+
+
+Party.create([
+  { :name => "무소속", :chairman_name => nil, :assembly_leader_name => nil, :founded_on => nil, :created_at => nil, :updated_at => nil },
+  { :name => "새누리당", :chairman_name => "황우여", :assembly_leader_name => "최경환", :founded_on => "1997-11-21", :created_at => nil, :updated_at => nil },
+  { :name => "민주당", :chairman_name => "김한길", :assembly_leader_name => "전병헌", :founded_on => "2011-12-16", :created_at => nil, :updated_at => nil },
+  { :name => "통합진보당", :chairman_name => "이정희", :assembly_leader_name => "오병윤", :founded_on => "2011-11-06", :created_at => nil, :updated_at => nil },
+  { :name => "정의당", :chairman_name => "천호선", :assembly_leader_name => "심상정", :founded_on => "2012-10-21", :created_at => nil, :updated_at => nil },
 ], :without_protection => true )
 
 

@@ -1,3 +1,3 @@
 class Party < ActiveRecord::Base
-  attr_accessible :assembly_leader_id, :chairman_id, :founded_on, :name
+  attr_accessible :assembly_leader_name, :chairman_name, :founded_on, :name
 end

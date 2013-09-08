@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130908102159) do
+ActiveRecord::Schema.define(:version => 20130908103814) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -56,18 +56,19 @@ ActiveRecord::Schema.define(:version => 20130908102159) do
 
   create_table "parties", :force => true do |t|
     t.string   "name"
-    t.integer  "chairman_id"
-    t.integer  "assembly_leader_id"
+    t.string   "chairman_name"
+    t.string   "assembly_leader_name"
     t.date     "founded_on"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
   create_table "politicians", :force => true do |t|
     t.string   "name"
     t.date     "birthday"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "party_id",   :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "positions", :force => true do |t|
