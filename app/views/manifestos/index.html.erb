@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Candidate</th>
+    <th>Politician</th>
     <th>Title</th>
     <th>Description</th>
     <th></th>
@@ -12,7 +12,7 @@
 
 <% @manifestos.each do |manifesto| %>
   <tr>
-    <td><%= manifesto.candidate_id %></td>
+    <td><%= manifesto.politician_id %></td>
     <td><%= manifesto.title %></td>
     <td><%= manifesto.description %></td>
     <td><%= link_to 'Show', manifesto %></td>

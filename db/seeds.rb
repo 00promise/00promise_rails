@@ -8,12 +8,6 @@ AdminUser.create([
 
 
 
-Manifesto.create([
-  { :candidate_id => nil, :title => nil, :description => nil, :created_at => nil, :updated_at => nil }
-], :without_protection => true )
-
-
-
 Party.create([
   { :name => "무소속", :chairman_name => nil, :assembly_leader_name => nil, :founded_on => nil, :created_at => nil, :updated_at => nil },
   { :name => "새누리당", :chairman_name => "황우여", :assembly_leader_name => "최경환", :founded_on => "1997-11-21", :created_at => nil, :updated_at => nil },

@@ -1,3 +1,3 @@
 class Manifesto < ActiveRecord::Base
-  attr_accessible :candidate_id, :description, :title
+  attr_accessible :description, :politician_id, :title
 end
