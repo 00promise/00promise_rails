@@ -1,4 +1,5 @@
 ActiveAdmin.register AdminUser do     
+  menu :parent => "유저 관리", :priority => 1, :label=>"관리자"
   index do                            
     column :email                     
     column :current_sign_in_at        
