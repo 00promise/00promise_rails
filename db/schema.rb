@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130908061033) do
+ActiveRecord::Schema.define(:version => 20130908101146) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,26 +46,6 @@ ActiveRecord::Schema.define(:version => 20130908061033) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "candidates", :force => true do |t|
-    t.integer  "position_id"
-    t.integer  "politician_id"
-    t.integer  "number"
-    t.boolean  "elected"
-    t.boolean  "current"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "elections", :force => true do |t|
-    t.string   "name"
-    t.date     "held_on"
-    t.date     "term_started_on"
-    t.date     "term_ended_on"
-    t.string   "note"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
   create_table "manifestos", :force => true do |t|
     t.integer  "candidate_id"
     t.string   "title"
@@ -85,9 +65,9 @@ ActiveRecord::Schema.define(:version => 20130908061033) do
 
   create_table "politicians", :force => true do |t|
     t.string   "name"
-    t.string   "birthday_date"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.date     "birthday"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "positions", :force => true do |t|

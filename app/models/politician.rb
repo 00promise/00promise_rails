@@ -1,3 +1,3 @@
 class Politician < ActiveRecord::Base
-  attr_accessible :birthday_date, :name
+  attr_accessible :birthday, :name
 end

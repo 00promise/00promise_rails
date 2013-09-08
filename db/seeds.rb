@@ -8,34 +8,30 @@ AdminUser.create([
 
 
 
-Election.create([
-  { :name => "제5회 전국동시지방선거", :held_on => "2010-06-02", :term_started_on => "2010-07-01", :term_ended_on => "2014-06-30", :note => "통합창원시출범", :created_at => "2013-09-08 06:14:40", :updated_at => "2013-09-08 06:14:40" }
-], :without_protection => true )
-
-
-
 Politician.create([
-  { :name => "오세훈", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "허남식", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "김범일", :birthday_date => nil, :created_at => "2013-09-08 06:58:18", :updated_at => "2013-09-08 06:58:18" },
-  { :name => "송영길", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "강운태", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "염홍철", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "박맹우", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "김문수", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "이광재", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "이시종", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "안희정", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "김완주", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "박준영", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "김관용", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "김두관", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
-  { :name => "우근민", :birthday_date => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" }
+  { :name => "박근혜", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "박원순", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "허남식", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "김범일", :birthday => nil, :created_at => "2013-09-08 06:58:18", :updated_at => "2013-09-08 06:58:18" },
+  { :name => "송영길", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "강운태", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "염홍철", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "박맹우", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "김문수", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "최문순", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "이시종", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "안희정", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "김완주", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "박준영", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "김관용", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "김두관", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" },
+  { :name => "우근민", :birthday => nil, :created_at => "2013-09-08 07:23:31", :updated_at => "2013-09-08 07:23:31" }
 ], :without_protection => true )
 
 
 
 Position.create([
+  { :name => "대통령", :type_name => "대통령", :type_code => 1, :district => "대한민국", :election_id => 1, :created_at => "2013-09-08 06:16:22", :updated_at => "2013-09-08 06:16:22" },
   { :name => "서울특별시장", :type_name => "광역자치단체장", :type_code => 3, :district => "서울특별시", :election_id => 1, :created_at => "2013-09-08 06:16:22", :updated_at => "2013-09-08 06:16:22" },
   { :name => "부산광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "부산광역시", :election_id => 1, :created_at => "2013-09-08 06:16:22", :updated_at => "2013-09-08 06:16:22" },
   { :name => "대구광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "대구광역시", :election_id => 1, :created_at => "2013-09-08 06:18:15", :updated_at => "2013-09-08 06:18:15" },
