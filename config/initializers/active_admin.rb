@@ -209,6 +209,8 @@ ActiveAdmin.setup do |config|
     admin.build_menu do |menu|
       #menu.add :label => "The Application", :url => "/", :priority => 0
       menu.add :label => "유저 관리", :priority => 1
+      menu.add :label => "정치인 관리", :priority => 2
+      menu.add :label => "공약 관리", :priority => 3
     end
     Draper::CollectionDecorator.delegate :reorder, :page, :current_page, :total_pages, :limit_value, :total_count, :num_pages
   end
