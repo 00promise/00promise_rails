@@ -3,8 +3,8 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Chairman</th>
-    <th>Assembly leader</th>
+    <th>Chairman name</th>
+    <th>Assembly leader name</th>
     <th>Founded on</th>
     <th></th>
     <th></th>
@@ -14,8 +14,8 @@
 <% @parties.each do |party| %>
   <tr>
     <td><%= party.name %></td>
-    <td><%= party.chairman_id %></td>
-    <td><%= party.assembly_leader_id %></td>
+    <td><%= party.chairman_name %></td>
+    <td><%= party.assembly_leader_name %></td>
     <td><%= party.founded_on %></td>
     <td><%= link_to 'Show', party %></td>
     <td><%= link_to 'Edit', edit_party_path(party) %></td>

@@ -1,11 +1,11 @@
 Promise::Application.routes.draw do
+  resources :parties
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   resources :positions
-
-  resources :parties
-
 
   resources :manifestos
 
