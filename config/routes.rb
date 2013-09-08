@@ -1,4 +1,7 @@
 Promise::Application.routes.draw do
+  resources :positions
+
+
   resources :parties
 
 
@@ -9,9 +12,6 @@ Promise::Application.routes.draw do
 
 
   resources :politicians
-
-
-  resources :positions
 
 
   resources :elections
