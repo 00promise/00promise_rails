@@ -34,3 +34,24 @@ Position.create([
 ], :without_protection => true )
 
 
+
+Politician.create([
+  { :name => "오세훈", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "허남식", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "김범일", :birthday_date => nil, :created_at => "2013-09-08 06:58:18", :updated_at => "2013-09-08 06:58:18" },
+  { :name => "송영길", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "강운태", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "염홍철", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "박맹우", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "김문수", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "이광재", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "이시종", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "안희정", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "김완주", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "박준영", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "김관용", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "김두관", :birthday_date => nil, :created_at => nil, :updated_at => nil },
+  { :name => "우근민", :birthday_date => nil, :created_at => nil, :updated_at => nil }
+], :without_protection => true )
+
+
