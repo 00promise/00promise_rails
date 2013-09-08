@@ -28,10 +28,12 @@ gem 'activeadmin'
 gem 'draper', ' >= 1.1.0'
 
 gem 'capistrano'
+group :development do
+  gem 'capistrano-unicorn', :require => false
+end
 gem 'mysql2'
 gem 'seed_dump'
 gem 'unicorn'
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
