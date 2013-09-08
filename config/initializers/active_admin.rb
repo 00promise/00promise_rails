@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Promise"
+  config.site_title = "00_Promise"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -205,6 +205,15 @@ ActiveAdmin.setup do |config|
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
+  config.namespace :admin do |admin|
+    admin.build_menu do |menu|
+      #menu.add :label => "The Application", :url => "/", :priority => 0
+      menu.add :label => "유저 관리", :priority => 1
+    end
+    Draper::CollectionDecorator.delegate :reorder, :page, :current_page, :total_pages, :limit_value, :total_count, :num_pages
+  end
 
+  #config.authorization_adapter = ActiveAdmin::CanCanAdapter
+  #config.cancan_ability_class = "Ability"
 
 end

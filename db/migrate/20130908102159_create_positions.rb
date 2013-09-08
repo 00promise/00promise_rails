@@ -5,7 +5,7 @@ class CreatePositions < ActiveRecord::Migration
       t.string :type_name
       t.integer :type_code
       t.string :district
-      t.integer :election_id
+      t.integer :politician_id
 
       t.timestamps
     end
