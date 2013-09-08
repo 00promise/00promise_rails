@@ -2,6 +2,8 @@ Promise::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  resources :positions
+
   resources :parties
 
 
@@ -12,9 +14,6 @@ Promise::Application.routes.draw do
 
 
   resources :politicians
-
-
-  resources :positions
 
 
   resources :elections

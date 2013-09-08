@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Type</th>
+    <th>Type name</th>
     <th>Type code</th>
     <th>District</th>
     <th></th>
@@ -14,7 +14,7 @@
 <% @positions.each do |position| %>
   <tr>
     <td><%= position.name %></td>
-    <td><%= position.type %></td>
+    <td><%= position.type_name %></td>
     <td><%= position.type_code %></td>
     <td><%= position.district %></td>
     <td><%= link_to 'Show', position %></td>
