@@ -1,4 +1,4 @@
-load "deploy/assets"
+#load "deploy/assets"
 #require "bundler/capistrano"
 require 'capistrano-unicorn'
 
@@ -22,7 +22,6 @@ server "211.110.130.122", :app, :web, :db
 
 set :deploy_to, "/srv"
 set :deploy_via, :remote_cache
-set (:bundle_cmd) { "#{release_path}/bin/bundle" }
 
 after 'deploy:restart', 'unicorn:reload'   # app IS NOT preloaded
 after 'deploy:restart', 'unicorn:restart'  # app preloaded
