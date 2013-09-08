@@ -1,0 +1,31 @@
+<h1>Listing elections</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Held on</th>
+    <th>Term started on</th>
+    <th>Term ended on</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @elections.each do |election| %>
+  <tr>
+    <td><%= election.name %></td>
+    <td><%= election.held_on %></td>
+    <td><%= election.term_started_on %></td>
+    <td><%= election.term_ended_on %></td>
+    <td><%= election.note %></td>
+    <td><%= link_to 'Show', election %></td>
+    <td><%= link_to 'Edit', edit_election_path(election) %></td>
+    <td><%= link_to 'Destroy', election, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Election', new_election_path %>
