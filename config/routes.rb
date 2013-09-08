@@ -1,4 +1,7 @@
 Promise::Application.routes.draw do
+  resources :candidates
+
+
   resources :politicians
 
 
