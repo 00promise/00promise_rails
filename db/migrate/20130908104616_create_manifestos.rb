@@ -4,6 +4,10 @@ class CreateManifestos < ActiveRecord::Migration
       t.integer :politician_id
       t.string :title
       t.text :description
+      t.integer :reply_cnt, default: 0
+      t.integer :good_cnt,  default: 0
+      t.integer :fair_cnt,  default: 0
+      t.integer :poor_cnt,  default: 0
 
       t.timestamps
     end
