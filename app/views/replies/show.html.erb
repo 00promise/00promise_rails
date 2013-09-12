@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Manifesto:</b>
+  <%= @reply.manifesto_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @reply.user_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @reply.status %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @reply.content %>
+</p>
+
+<p>
+  <b>Agree cnt:</b>
+  <%= @reply.agree_cnt %>
+</p>
+
+<p>
+  <b>Disagree cnt:</b>
+  <%= @reply.disagree_cnt %>
+</p>
+
+
+<%= link_to 'Edit', edit_reply_path(@reply) %> |
+<%= link_to 'Back', replies_path %>
