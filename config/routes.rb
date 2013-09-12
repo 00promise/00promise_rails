@@ -7,6 +7,7 @@ Promise::Application.routes.draw do
   resources :positions
   resources :manifestos
   resources :politicians
+  resources :ratings
 
 
   # The priority is based upon order of creation:
