@@ -32,6 +32,8 @@ group :development do
   gem 'capistrano-unicorn', :require => false
 end
 gem 'mysql2'
+gem 'oj'
+gem 'rabl'
 gem 'seed_dump'
 gem 'unicorn'
 
