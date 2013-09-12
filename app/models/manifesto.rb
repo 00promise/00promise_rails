@@ -3,4 +3,5 @@ class Manifesto < ActiveRecord::Base
   belongs_to :politician
   has_many :ratings
   has_many :replies
+  has_one :latest_reply, class_name: "Reply", order: "id DESC"
 end

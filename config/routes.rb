@@ -3,6 +3,13 @@ Promise::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  namespace :api do
+    get "manifestos/daily"
+
+    get "politicians/search"
+    get "politicians/:id", to: "politicians#show"
+  end
+
   resources :parties
   resources :positions
   resources :manifestos
