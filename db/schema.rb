@@ -70,9 +70,11 @@ ActiveRecord::Schema.define(:version => 20130912050230) do
   create_table "politicians", :force => true do |t|
     t.string   "name"
     t.date     "birthday"
-    t.integer  "party_id",   :default => 0
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.integer  "party_id",    :default => 0
+    t.string   "profile_img"
+    t.string   "bg_img"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "positions", :force => true do |t|

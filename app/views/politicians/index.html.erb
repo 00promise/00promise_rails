@@ -5,6 +5,8 @@
     <th>Name</th>
     <th>Birthday</th>
     <th>Party</th>
+    <th>Profile img</th>
+    <th>Bg img</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +17,8 @@
     <td><%= politician.name %></td>
     <td><%= politician.birthday %></td>
     <td><%= politician.party_id %></td>
+    <td><%= politician.profile_img %></td>
+    <td><%= politician.bg_img %></td>
     <td><%= link_to 'Show', politician %></td>
     <td><%= link_to 'Edit', edit_politician_path(politician) %></td>
     <td><%= link_to 'Destroy', politician, method: :delete, data: { confirm: 'Are you sure?' } %></td>

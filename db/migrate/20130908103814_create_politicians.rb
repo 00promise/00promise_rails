@@ -4,6 +4,8 @@ class CreatePoliticians < ActiveRecord::Migration
       t.string :name
       t.date :birthday
       t.integer :party_id,  default: 0
+      t.string :profile_img
+      t.string :bg_img
 
       t.timestamps
     end
