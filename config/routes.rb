@@ -4,6 +4,8 @@ Promise::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   namespace :api do
+    get "manifestos/daily"
+
     get "politicians/search"
     get "politicians/:id", to: "politicians#show"
   end
