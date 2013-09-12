@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Reply:</b>
+  <%= @reply_evaluation.reply_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @reply_evaluation.user_id %>
+</p>
+
+<p>
+  <b>Eval type:</b>
+  <%= @reply_evaluation.eval_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_reply_evaluation_path(@reply_evaluation) %> |
+<%= link_to 'Back', reply_evaluations_path %>

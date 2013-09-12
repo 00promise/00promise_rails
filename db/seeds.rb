@@ -91,13 +91,20 @@ Rating.create([
 
 
 Reply.create([
-  { :manifesto_id => 1, :user_id => 1, :status => "normal", :content => "경제 민주화 되고 있나요?;;;;", :agree_cnt => 0, :disagree_cnt => 0, :created_at => "2013-09-12 04:17:09", :updated_at => "2013-09-12 04:17:09" }
+  { :manifesto_id => 1, :user_id => 1, :status => "normal", :content => "경제 민주화 되고 있나요?;;;;", :agree_cnt => 1, :disagree_cnt => 0, :created_at => "2013-09-12 04:17:09", :updated_at => "2013-09-12 04:17:09" }
 ], :without_protection => true )
 
 
 
-User.create!([
-  { :email => "joonsoo.kang@gmail.com", :password => "1234abcd", :encrypted_password => "$2a$10$2KYIP4na9iQayfEs69ynf.6OISZuFjJqLG97931Ij4QkNsZNUVi3a", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 1, :current_sign_in_at => "2013-09-11 13:24:22", :last_sign_in_at => "2013-09-11 13:24:22", :current_sign_in_ip => "127.0.0.1", :last_sign_in_ip => "127.0.0.1", :created_at => "2013-09-11 13:24:22", :updated_at => "2013-09-11 13:24:22" }
+ReplyEvaluation.create([
+  { :reply_id => 1, :user_id => 2, :eval_type => "A", :created_at => "2013-09-12 05:11:11", :updated_at => "2013-09-12 05:11:11" }
+], :without_protection => true )
+
+
+
+User.create([
+  { :email => "joonsoo.kang@gmail.com", :password => "1234abcd", :encrypted_password => "$2a$10$2KYIP4na9iQayfEs69ynf.6OISZuFjJqLG97931Ij4QkNsZNUVi3a", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 1, :current_sign_in_at => "2013-09-11 13:24:22", :last_sign_in_at => "2013-09-11 13:24:22", :current_sign_in_ip => "127.0.0.1", :last_sign_in_ip => "127.0.0.1", :created_at => "2013-09-11 13:24:22", :updated_at => "2013-09-11 13:24:22" },
+  { :email => "kangjoonsoo@ktube.net", :password => "1234abcd", :encrypted_password => "$2a$10$ahEbd5S7ie20kimXVj32TuJVfualir1sFE5cQkI3n4zieWB5puxVy", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 1, :current_sign_in_at => "2013-09-12 05:09:52", :last_sign_in_at => "2013-09-12 05:09:52", :current_sign_in_ip => "127.0.0.1", :last_sign_in_ip => "127.0.0.1", :created_at => "2013-09-12 05:09:52", :updated_at => "2013-09-12 05:09:52" }
 ], :without_protection => true )
 
 
