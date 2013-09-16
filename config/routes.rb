@@ -6,6 +6,9 @@ Promise::Application.routes.draw do
   namespace :api do
     get "manifestos/daily"
 
+    get "parties", to: "parties#index"
+    get "parties/:id/politicians", to: "parties#politicians"
+
     get "politicians/search"
     get "politicians/:id", to: "politicians#show"
   end
