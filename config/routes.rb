@@ -16,6 +16,11 @@ Promise::Application.routes.draw do
 
     post "ratings/update"
     post "ratings/destroy"
+
+    get "replies/manifesto/:id", to: "replies#manifesto"
+    post "replies/create"
+    post "replies/destroy"
+    # post "replies/report"
   end
 
   resources :parties
