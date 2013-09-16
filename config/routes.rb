@@ -13,6 +13,9 @@ Promise::Application.routes.draw do
 
     get "politicians/search"
     get "politicians/:id", to: "politicians#show"
+
+    post "ratings/update"
+    post "ratings/destroy"
   end
 
   resources :parties
