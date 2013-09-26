@@ -1,5 +1,5 @@
-class Api::RatingsController < ApplicationController
-  skip_before_filter :verify_authenticity_token
+class Api::RatingsController < Api::BaseController
+  before_filter :auth_user
 
   def update
     hash = {}
