@@ -4,7 +4,7 @@ Promise::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   namespace :api do
-    devise_for :users
+    devise_for :users, module: "api/users"
 
     get "manifestos/:id", to: "manifestos#show"
     get "manifestos/daily"

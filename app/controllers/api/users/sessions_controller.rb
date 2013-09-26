@@ -1,4 +1,4 @@
-class Api::SessionsController < Devise::SessionsController
+class Api::Users::SessionsController < Devise::SessionsController
   prepend_before_filter :require_no_authentication, :only => [:create]
   # include Devise::Controllers::InternalHelpers
   # include Devise::Controllers::Helpers
