@@ -23,6 +23,8 @@ Promise::Application.routes.draw do
     post "replies/create"
     post "replies/destroy"
     # post "replies/report"
+
+    post "reply_evaluations/create"
   end
 
   resources :parties

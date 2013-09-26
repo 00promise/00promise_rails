@@ -1,0 +1,8 @@
+ko:
+  activerecord:
+    errors:
+      models:
+        reply_evaluation:
+          attributes:
+            user_id:
+              # taken: "이미 평가하셨습니다."
