@@ -1,5 +1,5 @@
-class Api::RepliesController < ApplicationController
-  skip_before_filter :verify_authenticity_token
+class Api::RepliesController < Api::BaseController
+  before_filter :auth_user, :except => [:manifesto]
 
   def manifesto
     @manifesto = Manifesto.find(params[:id])
