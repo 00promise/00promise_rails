@@ -11,9 +11,9 @@ AdminUser.create!([
 
 
 Election.create([
-  { :name => "제5회 전국동시지방선거", :held_on => "2010-06-02", :created_at => "2013-09-26 10:29:52", :updated_at => "2013-09-26 10:29:52" },
-  { :name => "제19대 국회의원선거", :held_on => "2012-04-11", :created_at => "2013-09-26 10:30:19", :updated_at => "2013-09-26 10:30:19" },
-  { :name => "제18대 대통령선거", :held_on => "2012-12-19", :created_at => "2013-09-26 10:30:48", :updated_at => "2013-09-26 10:30:48" }
+  { :name => "제5회 전국동시지방선거", :held_on => "2010-06-02", :enabled => true, :ord => 3, :created_at => "2013-09-26 01:29:52", :updated_at => "2013-09-27 15:51:14" },
+  { :name => "제19대 국회의원선거", :held_on => "2012-04-11", :enabled => true, :ord => 2, :created_at => "2013-09-26 01:30:19", :updated_at => "2013-09-27 15:50:57" },
+  { :name => "제18대 대통령선거", :held_on => "2012-12-19", :enabled => true, :ord => 1, :created_at => "2013-09-26 01:30:48", :updated_at => "2013-09-27 15:50:39" }
 ], :without_protection => true )
 
 
@@ -49,8 +49,8 @@ Party.create([
 
 
 Politician.create([
-  { :name => "박근혜", :birthday => nil, :party_id => 2, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20121219/Sd1/Sgg10000000/Hb100103014/gicho/100103014.jpg", :bg_img => "http://www.movdic.com/wordpress/wp-content/uploads/2012/07/park_120820.jpg", :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:39:45" },
-  { :name => "박원순", :birthday => nil, :party_id => 3, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20111026/Sd1100/Sgg3110000/Hb100025509/gicho/100025509.jpg", :bg_img => "http://blogimg.ohmynews.com/attach/6480/1374760326.jpg", :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:40:54" },
+  { :name => "박근혜", :birthday => nil, :party_id => 2, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20121219/Sd1/Sgg10000000/Hb100103014/gicho/100103014.jpg", :bg_img => "", :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:39:45" },
+  { :name => "박원순", :birthday => nil, :party_id => 3, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20111026/Sd1100/Sgg3110000/Hb100025509/gicho/100025509.jpg", :bg_img => "", :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:40:54" },
   { :name => "허남식", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
   { :name => "김범일", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 12:58:18", :updated_at => "2013-09-07 12:58:18" },
   { :name => "송영길", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },

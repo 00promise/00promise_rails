@@ -47,10 +47,12 @@ ActiveRecord::Schema.define(:version => 20130927053713) do
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "elections", :force => true do |t|
-    t.string   "name"
-    t.date     "held_on"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name",                         :null => false
+    t.date     "held_on",                      :null => false
+    t.boolean  "enabled",    :default => true
+    t.integer  "ord",        :default => 999
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "manifestos", :force => true do |t|
