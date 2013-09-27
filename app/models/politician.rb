@@ -1,5 +1,5 @@
 class Politician < ActiveRecord::Base
-  attr_accessible :birthday, :name, :party_id
+  attr_accessible :birthday, :memo, :name, :party_id
   belongs_to :party
   has_one :winner # 향후 current = true 조건 추가
   has_one :position, through: :winner # 향후 current = true 조건 추가

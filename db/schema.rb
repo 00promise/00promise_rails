@@ -82,9 +82,8 @@ ActiveRecord::Schema.define(:version => 20130927160015) do
   create_table "politicians", :force => true do |t|
     t.string   "name"
     t.date     "birthday"
-    t.integer  "party_id",         :default => 0
-    t.string   "profile_img"
-    t.string   "bg_img"
+    t.integer  "party_id",         :default => 1
+    t.text     "memo"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.string   "img_file_name"
