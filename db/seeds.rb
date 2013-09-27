@@ -71,29 +71,29 @@ Politician.create([
 
 
 Position.create([
-  { :name => "대통령", :type_name => "대통령", :type_code => 1, :district => "대한민국", :politician_id => 1, :created_at => "2013-09-07 12:16:22", :updated_at => "2013-09-07 12:16:22" },
-  { :name => "서울특별시장", :type_name => "광역자치단체장", :type_code => 3, :district => "서울특별시", :politician_id => 2, :created_at => "2013-09-07 12:16:22", :updated_at => "2013-09-07 12:16:22" },
-  { :name => "부산광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "부산광역시", :politician_id => 3, :created_at => "2013-09-07 12:16:22", :updated_at => "2013-09-07 12:16:22" },
-  { :name => "대구광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "대구광역시", :politician_id => 4, :created_at => "2013-09-07 12:18:15", :updated_at => "2013-09-07 12:18:15" },
-  { :name => "인천광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "인천광역시", :politician_id => 5, :created_at => "2013-09-07 12:18:15", :updated_at => "2013-09-07 12:18:15" },
-  { :name => "광주광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "광주광역시", :politician_id => 6, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "대전광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "대전광역시", :politician_id => 7, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "울산광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "울산광역시", :politician_id => 8, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "경기도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "경기도", :politician_id => 9, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "강원도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "강원도", :politician_id => 10, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "충청북도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "충청북도", :politician_id => 11, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "충청남도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "충청남도", :politician_id => 12, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "전라북도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "전라북도", :politician_id => 13, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "전라남도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "전라남도", :politician_id => 14, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "경상북도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "경상북도", :politician_id => 15, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "경상남도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "경상남도", :politician_id => 16, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" },
-  { :name => "제주특별자치도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "제주특별자치도", :politician_id => 17, :created_at => "2013-09-07 12:17:56", :updated_at => "2013-09-07 12:17:56" }
+  { :name => "대통령", :type_name => "대통령", :type_code => 1, :district => "대한민국", :politician_id => 1, :created_at => "2013-09-07 03:16:22", :updated_at => "2013-09-07 03:16:22" },
+  { :name => "서울특별시장", :type_name => "광역자치단체장", :type_code => 3, :district => "서울특별시", :politician_id => 2, :created_at => "2013-09-07 03:16:22", :updated_at => "2013-09-07 03:16:22" },
+  { :name => "부산광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "부산광역시", :politician_id => 3, :created_at => "2013-09-07 03:16:22", :updated_at => "2013-09-07 03:16:22" },
+  { :name => "대구광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "대구광역시", :politician_id => 4, :created_at => "2013-09-07 03:18:15", :updated_at => "2013-09-07 03:18:15" },
+  { :name => "인천광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "인천광역시", :politician_id => 5, :created_at => "2013-09-07 03:18:15", :updated_at => "2013-09-07 03:18:15" },
+  { :name => "광주광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "광주광역시", :politician_id => 6, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "대전광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "대전광역시", :politician_id => 7, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "울산광역시장", :type_name => "광역자치단체장", :type_code => 3, :district => "울산광역시", :politician_id => 8, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "경기도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "경기도", :politician_id => 9, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "강원도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "강원도", :politician_id => 10, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "충청북도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "충청북도", :politician_id => 11, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "충청남도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "충청남도", :politician_id => 12, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "전라북도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "전라북도", :politician_id => 13, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "전라남도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "전라남도", :politician_id => 14, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "경상북도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "경상북도", :politician_id => 15, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "경상남도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "경상남도", :politician_id => 16, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" },
+  { :name => "제주특별자치도지사", :type_name => "광역자치단체장", :type_code => 3, :district => "제주특별자치도", :politician_id => 17, :created_at => "2013-09-07 03:17:56", :updated_at => "2013-09-07 03:17:56" }
 ], :without_protection => true )
 
 
 
 Rating.create([
-  { :manifesto_id => 1, :user_id => 1, :grade => 2, :created_at => "2013-09-11 09:27:19", :updated_at => "2013-09-16 00:19:55" }
+  { :manifesto_id => 1, :user_id => 1, :grade => 2, :created_at => "2013-09-11 00:27:19", :updated_at => "2013-09-15 15:19:55" }
 ], :without_protection => true )
 
 
@@ -122,6 +122,28 @@ ReplyEvaluation.create([
 User.create([
   { :email => "joonsoo.kang@gmail.com", :password => "1234abcd", :encrypted_password => "$2a$10$2KYIP4na9iQayfEs69ynf.6OISZuFjJqLG97931Ij4QkNsZNUVi3a", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 1, :current_sign_in_at => "2013-09-11 13:24:22", :last_sign_in_at => "2013-09-11 13:24:22", :current_sign_in_ip => "127.0.0.1", :last_sign_in_ip => "127.0.0.1", :created_at => "2013-09-11 13:24:22", :updated_at => "2013-09-11 13:24:22" },
   { :email => "kangjoonsoo@ktube.net", :password => "1234abcd", :encrypted_password => "$2a$10$ahEbd5S7ie20kimXVj32TuJVfualir1sFE5cQkI3n4zieWB5puxVy", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 1, :current_sign_in_at => "2013-09-12 05:09:52", :last_sign_in_at => "2013-09-12 05:09:52", :current_sign_in_ip => "127.0.0.1", :last_sign_in_ip => "127.0.0.1", :created_at => "2013-09-12 05:09:52", :updated_at => "2013-09-12 05:09:52" }
+], :without_protection => true )
+
+
+
+Winner.create([
+  { :election_id => 3, :position_id => 1, :politician_id => 1, :party_id => 2, :present => true, :created_at => "2013-09-27 16:07:10", :updated_at => "2013-09-27 16:07:10" },
+  { :election_id => 1, :position_id => 2, :politician_id => 2, :party_id => 1, :present => true, :created_at => "2013-09-27 16:15:22", :updated_at => "2013-09-27 16:15:22" },
+  { :election_id => 1, :position_id => 3, :politician_id => 3, :party_id => 2, :present => true, :created_at => nil, :updated_at => nil },
+  { :election_id => 1, :position_id => 4, :politician_id => 4, :party_id => 2, :present => true, :created_at => nil, :updated_at => nil },
+  { :election_id => 1, :position_id => 5, :politician_id => 5, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 6, :politician_id => 6, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 7, :politician_id => 7, :party_id => 6, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:31:25" },
+  { :election_id => 1, :position_id => 8, :politician_id => 8, :party_id => 2, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 9, :politician_id => 9, :party_id => 2, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 10, :politician_id => 10, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 11, :politician_id => 11, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 12, :politician_id => 12, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 13, :politician_id => 13, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 14, :politician_id => 14, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 15, :politician_id => 15, :party_id => 2, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 16, :politician_id => 16, :party_id => 2, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
+  { :election_id => 1, :position_id => 17, :politician_id => 17, :party_id => 1, :present => true, :created_at => "2013-09-27 16:29:12", :updated_at => "2013-09-27 16:29:12" }
 ], :without_protection => true )
 
 
