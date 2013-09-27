@@ -100,9 +100,9 @@ ActiveRecord::Schema.define(:version => 20130927160015) do
     t.string   "type_name"
     t.integer  "type_code"
     t.string   "district"
-    t.integer  "politician_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.boolean  "enabled",    :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "ratings", :force => true do |t|
