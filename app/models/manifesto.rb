@@ -6,4 +6,8 @@ class Manifesto < ActiveRecord::Base
   has_many :ratings
   has_many :replies
   has_one :latest_reply, class_name: "Reply", order: "id DESC"
+
+  def politician
+    self.winner.politician
+  end
 end
