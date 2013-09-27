@@ -44,29 +44,29 @@ Party.create([
   { :name => "민주당", :visible => true, :ord => 3, :founded_on => "2011-12-16", :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
   { :name => "통합진보당", :visible => true, :ord => 4, :founded_on => "2011-11-06", :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
   { :name => "정의당", :visible => true, :ord => 5, :founded_on => "2012-10-21", :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
-  { :name => "자유선진당", :visible => false, :ord => 999, :founded_on => "2008-02-01", :created_at => nil, :updated_at => nil, :img_file_name => nil, :content_type => nil, :file_size => nil }
+  { :name => "자유선진당", :visible => false, :ord => 999, :founded_on => "2008-02-01", :created_at => "2013-09-28 01:56:52", :updated_at => "2013-09-28 01:56:52", :img_file_name => nil, :content_type => nil, :file_size => nil }
 ], :without_protection => true )
 
 
 
 Politician.create([
-  { :name => "박근혜", :birthday => nil, :party_id => 2, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20121219/Sd1/Sgg10000000/Hb100103014/gicho/100103014.jpg", :bg_img => "", :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:39:45" },
-  { :name => "박원순", :birthday => nil, :party_id => 3, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20111026/Sd1100/Sgg3110000/Hb100025509/gicho/100025509.jpg", :bg_img => "", :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:40:54" },
-  { :name => "허남식", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "김범일", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 12:58:18", :updated_at => "2013-09-07 12:58:18" },
-  { :name => "송영길", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "강운태", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "염홍철", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "박맹우", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "김문수", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "최문순", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "이시종", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "안희정", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "김완주", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "박준영", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "김관용", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "김두관", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" },
-  { :name => "우근민", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31" }
+  { :name => "박근혜", :birthday => nil, :party_id => 2, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20121219/Sd1/Sgg10000000/Hb100103014/gicho/100103014.jpg", :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:39:45", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "박원순", :birthday => nil, :party_id => 3, :profile_img => "http://party.nec.go.kr/fileserver/huboja/20111026/Sd1100/Sgg3110000/Hb100025509/gicho/100025509.jpg", :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-11 13:40:54", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "허남식", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "김범일", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 12:58:18", :updated_at => "2013-09-07 12:58:18", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "송영길", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "강운태", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "염홍철", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "박맹우", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "김문수", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "최문순", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "이시종", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "안희정", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "김완주", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "박준영", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "김관용", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "김두관", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil },
+  { :name => "우근민", :birthday => nil, :party_id => 0, :profile_img => nil, :bg_img => nil, :created_at => "2013-09-07 13:23:31", :updated_at => "2013-09-07 13:23:31", :img_file_name => nil, :img_content_type => nil, :img_file_size => nil, :bg_img_file_name => nil, :bg_content_type => nil, :bg_file_size => nil }
 ], :without_protection => true )
 
 
@@ -130,8 +130,8 @@ User.create([
 Winner.create([
   { :election_id => 3, :position_id => 1, :politician_id => 1, :party_id => 2, :present => true, :created_at => "2013-09-27 16:07:10", :updated_at => "2013-09-27 16:07:10" },
   { :election_id => 1, :position_id => 2, :politician_id => 2, :party_id => 1, :present => true, :created_at => "2013-09-27 16:15:22", :updated_at => "2013-09-27 16:15:22" },
-  { :election_id => 1, :position_id => 3, :politician_id => 3, :party_id => 2, :present => true, :created_at => nil, :updated_at => nil },
-  { :election_id => 1, :position_id => 4, :politician_id => 4, :party_id => 2, :present => true, :created_at => nil, :updated_at => nil },
+  { :election_id => 1, :position_id => 3, :politician_id => 3, :party_id => 2, :present => true, :created_at => "2013-09-28 01:56:58", :updated_at => "2013-09-28 01:56:58" },
+  { :election_id => 1, :position_id => 4, :politician_id => 4, :party_id => 2, :present => true, :created_at => "2013-09-28 01:56:58", :updated_at => "2013-09-28 01:56:58" },
   { :election_id => 1, :position_id => 5, :politician_id => 5, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
   { :election_id => 1, :position_id => 6, :politician_id => 6, :party_id => 3, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:29:11" },
   { :election_id => 1, :position_id => 7, :politician_id => 7, :party_id => 6, :present => true, :created_at => "2013-09-27 16:29:11", :updated_at => "2013-09-27 16:31:25" },

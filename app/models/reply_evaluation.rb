@@ -3,7 +3,7 @@ class ReplyEvaluation < ActiveRecord::Base
 
   attr_accessible :eval_type, :reply_id, :user_id
   belongs_to :reply
-  validates :eval_type, :inclusion => %w[A, D]
+  validates :eval_type, :inclusion => %w[A D]
   validates :reply_id, :presence => true
   validates :user_id, :presence => true, :uniqueness => {:scope => :reply_id}
 
