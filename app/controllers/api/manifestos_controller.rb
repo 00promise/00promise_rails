@@ -4,6 +4,7 @@ class Api::ManifestosController < ApplicationController
   end
 
   def daily
+    @code = "0000"
     @manifestos = Manifesto.order("reply_cnt DESC").limit(5)
   end
 
