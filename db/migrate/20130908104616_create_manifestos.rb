@@ -1,7 +1,7 @@
 class CreateManifestos < ActiveRecord::Migration
   def change
     create_table :manifestos do |t|
-      t.integer :politician_id
+      t.integer :winner_id
       t.string :title
       t.text :description
       t.integer :reply_cnt, default: 0

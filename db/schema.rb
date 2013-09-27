@@ -56,15 +56,15 @@ ActiveRecord::Schema.define(:version => 20130927160015) do
   end
 
   create_table "manifestos", :force => true do |t|
-    t.integer  "politician_id"
+    t.integer  "winner_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "reply_cnt",     :default => 0
-    t.integer  "good_cnt",      :default => 0
-    t.integer  "fair_cnt",      :default => 0
-    t.integer  "poor_cnt",      :default => 0
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.integer  "reply_cnt",   :default => 0
+    t.integer  "good_cnt",    :default => 0
+    t.integer  "fair_cnt",    :default => 0
+    t.integer  "poor_cnt",    :default => 0
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "parties", :force => true do |t|

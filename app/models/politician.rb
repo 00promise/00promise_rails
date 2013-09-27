@@ -1,8 +1,10 @@
 class Politician < ActiveRecord::Base
   attr_accessible :birthday, :name, :party_id
   belongs_to :party
-  has_one :position
-  has_many :manifestos
+  has_one :winner # 향후 current = true 조건 추가
+  has_one :position, through: :winner # 향후 current = true 조건 추가
+  has_many :winners
+  has_many :manifestos, through: :winners
   accepts_nested_attributes_for :manifestos
   attr_accessible :manifestos_attributes
   # has_attached_file :avatar,

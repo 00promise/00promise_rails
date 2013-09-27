@@ -4,4 +4,5 @@ class Winner < ActiveRecord::Base
   belongs_to :position
   belongs_to :politician
   belongs_to :party
+  has_many :manifestos
 end
