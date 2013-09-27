@@ -5,7 +5,8 @@ protected
 
   def auth_user
     unless user_signed_in?
-      render :json => { :success => false, :message => "Unauthorized user" }, :status => 401
+      @message = "로그인이 필요합니다."
+      render :json => { :code => CODE_FAIL, :message => @message }, :status => 401
       return
     end
   end
