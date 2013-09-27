@@ -6,6 +6,10 @@ Promise::Application.routes.draw do
   namespace :api do
     devise_for :users, module: "api/users"
 
+    get "district/sidos"
+    get "district/sidos/:id/sigungus", to: "district#sigungus"
+    get "district/search", to: "district#search"
+
     get "manifestos/daily"
     get "manifestos/:id", to: "manifestos#show"
     get "manifestos/politician/:id", to: "manifestos#politician"
