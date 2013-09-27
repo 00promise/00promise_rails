@@ -26,6 +26,7 @@ gem 'jquery-rails', "< 3.0.0"
 # for admin
 gem 'activeadmin'
 gem 'draper', ' >= 1.1.0'
+gem "paperclip", "~> 3.0"
 
 gem 'capistrano'
 group :development do

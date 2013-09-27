@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130926093904) do
+ActiveRecord::Schema.define(:version => 20130927053713) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -72,16 +72,25 @@ ActiveRecord::Schema.define(:version => 20130926093904) do
     t.date     "founded_on"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.string   "img_file_name"
+    t.string   "content_type"
+    t.integer  "file_size"
   end
 
   create_table "politicians", :force => true do |t|
     t.string   "name"
     t.date     "birthday"
-    t.integer  "party_id",    :default => 0
+    t.integer  "party_id",         :default => 0
     t.string   "profile_img"
     t.string   "bg_img"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.string   "bg_img_file_name"
+    t.string   "bg_content_type"
+    t.integer  "bg_file_size"
   end
 
   create_table "positions", :force => true do |t|
