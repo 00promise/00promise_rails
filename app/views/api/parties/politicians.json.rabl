@@ -1,6 +1,11 @@
-object @politicians
-attributes :id, :name, :birthday, :profile_img, :bg_img
+node :code do
+  @code
+end
 
-child :party do
-  attributes :id, :name
+node :message do
+  @message
+end
+
+node :data do
+  partial("api/shared/politician", :object => @politicians )
 end
