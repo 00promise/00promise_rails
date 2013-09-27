@@ -3,8 +3,8 @@ class Politician < ActiveRecord::Base
   belongs_to :party
   has_one :position
   has_many :manifestos
-
-
+  accepts_nested_attributes_for :manifestos
+  attr_accessible :manifestos_attributes
   # has_attached_file :avatar,
   #     :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
   #     :url => "/system/:attachment/:id/:style/:filename"

@@ -1,13 +1,11 @@
 class PoliticianDecorator < Draper::Decorator
   delegate_all
 
-  # Define presentation-specific methods here. Helpers are accessed through
-  # `helpers` (aka `h`). You can override attributes, for example:
-  #
-  #   def created_at
-  #     helpers.content_tag :span, class: 'time' do
-  #       object.created_at.strftime("%a %m/%d/%y")
-  #     end
-  #   end
+  def img_html
+    h.image_tag model.img.url(:thumb), :style=>"width: 100px; height: 100px"
+  end
+  def bg_img_html
+    h.image_tag model.bg_img.url(:thumb), :style=>"width: 100px; height: 100px"
+  end
 
 end
