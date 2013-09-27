@@ -39,11 +39,12 @@ Manifesto.create([
 
 
 Party.create([
-  { :name => "무소속", :chairman_name => nil, :assembly_leader_name => nil, :founded_on => nil, :created_at => "2013-09-07 16:48:34", :updated_at => "2013-09-07 16:48:34" },
-  { :name => "새누리당", :chairman_name => "황우여", :assembly_leader_name => "최경환", :founded_on => "1997-11-21", :created_at => "2013-09-07 16:48:34", :updated_at => "2013-09-07 16:48:34" },
-  { :name => "민주당", :chairman_name => "김한길", :assembly_leader_name => "전병헌", :founded_on => "2011-12-16", :created_at => "2013-09-07 16:48:34", :updated_at => "2013-09-07 16:48:34" },
-  { :name => "통합진보당", :chairman_name => "이정희", :assembly_leader_name => "오병윤", :founded_on => "2011-11-06", :created_at => "2013-09-07 16:48:34", :updated_at => "2013-09-07 16:48:34" },
-  { :name => "정의당", :chairman_name => "천호선", :assembly_leader_name => "심상정", :founded_on => "2012-10-21", :created_at => "2013-09-07 16:48:34", :updated_at => "2013-09-07 16:48:34" }
+  { :name => "무소속", :visible => true, :ord => 1, :founded_on => nil, :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
+  { :name => "새누리당", :visible => true, :ord => 2, :founded_on => "1997-11-21", :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
+  { :name => "민주당", :visible => true, :ord => 3, :founded_on => "2011-12-16", :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
+  { :name => "통합진보당", :visible => true, :ord => 4, :founded_on => "2011-11-06", :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
+  { :name => "정의당", :visible => true, :ord => 5, :founded_on => "2012-10-21", :created_at => "2013-09-07 07:48:34", :updated_at => "2013-09-07 07:48:34", :img_file_name => nil, :content_type => nil, :file_size => nil },
+  { :name => "자유선진당", :visible => false, :ord => 999, :founded_on => "2008-02-01", :created_at => nil, :updated_at => nil, :img_file_name => nil, :content_type => nil, :file_size => nil }
 ], :without_protection => true )
 
 

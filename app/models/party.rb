@@ -1,5 +1,5 @@
 class Party < ActiveRecord::Base
-  attr_accessible :assembly_leader_name, :chairman_name, :founded_on, :name
+  attr_accessible :founded_on, :name, :ord, :visible
   has_many :politicians
 
   attr_accessible :img

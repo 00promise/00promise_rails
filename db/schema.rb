@@ -69,11 +69,11 @@ ActiveRecord::Schema.define(:version => 20130927160015) do
 
   create_table "parties", :force => true do |t|
     t.string   "name"
-    t.string   "chairman_name"
-    t.string   "assembly_leader_name"
+    t.boolean  "visible",       :default => true
+    t.integer  "ord",           :default => 999
     t.date     "founded_on"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "img_file_name"
     t.string   "content_type"
     t.integer  "file_size"
