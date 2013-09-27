@@ -1,2 +1,11 @@
-object @parties
-attributes :id, :name
+node :code do
+  @code
+end
+
+node :message do
+  @message
+end
+
+node :data do
+  partial("api/shared/party", :object => @parties )
+end
