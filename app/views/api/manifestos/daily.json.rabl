@@ -3,7 +3,7 @@ node :code do
 end
 
 node :message do
- "..."
+  @message
 end
 
 node :data do

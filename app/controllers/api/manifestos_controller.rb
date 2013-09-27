@@ -1,10 +1,9 @@
-class Api::ManifestosController < ApplicationController
+class Api::ManifestosController < Api::BaseController
   def show
     @manifesto = Manifesto.find(params[:id])
   end
 
   def daily
-    @code = "0000"
     @manifestos = Manifesto.order("reply_cnt DESC").limit(5)
   end
 

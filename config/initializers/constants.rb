@@ -1,0 +1,2 @@
+CODE_OK = "0000"
+CODE_FAIL = "1000"
