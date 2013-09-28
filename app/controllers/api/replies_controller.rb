@@ -17,11 +17,19 @@ class Api::RepliesController < Api::BaseController
     @reply.user_id = current_user.id
     @reply.content = params[:content]
     @reply.save
+    @message = "댓글이 작성되었습니다."
   end
 
   def destroy
     @reply = Reply.find_by_id_and_user_id(params[:id], current_user.id)
-    @reply && @reply.destroy
+    if @reply
+      @reply.destroy
+      @message = "댓글이 삭제되었습니다."
+    else
+      @code = CODE_FAIL
+      @message = "이미 처리되었습니다."
+      render :json => { :code => @code, :message => @message }
+    end
   end
 
   def report
