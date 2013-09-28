@@ -1,0 +1,14 @@
+file = File.new("script/zipcodes.csv", "r")
+while (line = file.gets)
+  puts '**************************************************'
+  puts line
+
+  code, sido_name, name = line.split(",")
+  puts code
+  puts sido_name
+  puts name
+  sido = Sido.find_by_name(sido_name)
+  puts sido.to_yaml
+
+  Sigungu.create({:sido_id => sido.id, :name => name, :full_name => "#{sido_name} #{name}", :code => code})
+end
