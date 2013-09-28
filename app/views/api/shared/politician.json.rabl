@@ -1,7 +1,7 @@
 attributes :id, :name, :img, :bg_img, :memo
 
 node :birthday do |p|
-  p.birthday.to_time.to_i
+  Time.new.to_i
 end
 
 node :position_name do |p|
