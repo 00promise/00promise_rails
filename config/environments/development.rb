@@ -42,7 +42,6 @@ Promise::Application.configure do
     :storage => :fog,
     :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public/system"},
     :fog_directory => "",:fog_host => "http://00promise.org",
-    :url=>"/system/:attachment/:id/:style/:filename",
     :fog_public => true,
   }
 
