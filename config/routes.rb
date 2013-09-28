@@ -6,6 +6,8 @@ Promise::Application.routes.draw do
   namespace :api do
     devise_scope :user do
       post "users/sign_up", to: "users/registrations#create"
+      post "users/sign_in", to: "users/sessions#create"
+      post "users/sign_out", to: "users/sessions#destroy"
     end
 
     get "district/sidos"

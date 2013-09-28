@@ -1,31 +1,34 @@
-class Api::Users::SessionsController < Devise::SessionsController
-  prepend_before_filter :require_no_authentication, :only => [:create]
-  # include Devise::Controllers::InternalHelpers
-  # include Devise::Controllers::Helpers
-  respond_to :json
+class Api::Users::SessionsController < Api::BaseController
+# class Api::Users::SessionsController < Devise::SessionsController
+  # prepend_before_filter :require_no_authentication, :only => [:create]
 
   def create
-    resource = User.find_for_database_authentication(:email => params[:email])
-    return invalid_login_attempt unless resource
+    @user = User.find_for_database_authentication(:email => params[:email])
 
-    if resource.valid_password?(params[:password])
-      # sign_in(:user, resource)
-      resource.ensure_authentication_token!
-      render :json => { :success => true, :auth_token => resource.authentication_token, :email => resource.email }
-      return
+    if @user && @user.valid_password?(params[:password])
+      # sign_in(:user, @user)
+      @user.ensure_authentication_token!
+    else
+      @message = "계정 혹은 비밀번호를 다시 확인해주시기 바랍니다."
+      invalid_attempt
     end
-    invalid_login_attempt
   end
 
   def destroy
-    current_user.reset_authentication_token!
-    render :json => { :success => true }
+    if user_signed_in?
+      current_user.reset_authentication_token!
+      render :json => { :code => @code, :message => "성공적으로 로그아웃하였습니다." }
+    else
+      @message = "잘못된 접근입니다."
+      invalid_attempt
+    end
   end
 
 protected
 
-  def invalid_login_attempt
+  def invalid_attempt
     warden.custom_failure!
-    render :json => { :success => false, :message => "Error with your login or password" }, :status => 401
+    @code = CODE_FAIL
+    render :json => { :code => @code, :message => @message }, :status => 401
   end
 end
