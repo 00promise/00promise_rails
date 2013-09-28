@@ -1,6 +1,11 @@
-object @replies
-attributes :id, :content, :agree_cnt, :disagree_cnt
+node :code do
+  @code
+end
 
-node :username do |reply|
-  reply.user.email
+node :message do
+  @message
+end
+
+node :data do
+  partial("api/shared/reply", :object => @replies)
 end

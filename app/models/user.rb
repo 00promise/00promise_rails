@@ -8,4 +8,14 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
   validates :password_confirmation, presence: true
+
+  def masked_name
+    name = self.email.split("@")[0]
+
+    if name.length <= 3
+      name
+    else
+      name[0, 3] + name[3..name.length].gsub(/./, '*')
+    end
+  end
 end
