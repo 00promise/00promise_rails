@@ -1,0 +1,16 @@
+require 'csv'
+
+csv_text = "script/manifestos.csv"
+CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converters => :all) do |row|
+  h = row.to_hash
+  puts "**************************************************"
+  puts h
+
+  # 공약 정보 저장
+  m = Manifesto.new
+  m.winner_id = h[:id].to_s[6..-1].to_i
+  m.title = h[:title]
+  m.description = h[:description]
+  m.save
+  # puts m.to_yaml
+end
