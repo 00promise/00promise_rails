@@ -1,3 +1,5 @@
 CODE_OK = "0000"
 CODE_FAIL = "1000"
 CODE_UNAUHTORHIZED = "0401"
+
+FIXNUM_MAX = (2**(0.size * 8 -2) -1)

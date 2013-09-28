@@ -2,8 +2,12 @@ class Api::RepliesController < Api::BaseController
   before_filter :auth_user, :except => [:manifesto]
 
   def manifesto
+    count = params[:count] || 20
+    count = 50 if count > 50
+    max_id = params[:max_id] || FIXNUM_MAX
+
     @manifesto = Manifesto.find(params[:id])
-    @replies = @manifesto.replies.order("id DESC").limit(20)
+    @replies = @manifesto.replies.where("id < ?", max_id).order("id DESC").limit(count)
   end
 
   def create
