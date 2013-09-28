@@ -10,7 +10,7 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
 
   imagepath = "#{Rails.root}/public/politician/img/#{h[:id]}_#{name}.png"
   #imagepath = imagepath.gsub(/\s+/, " ").delete(" ").delete("\n")
-
+  p imagepath
   if File.exists?(imagepath)
     p "imgpath #{imagepath}"
     politician = Politician.find(h[:id].to_s[6..-1].to_i)
