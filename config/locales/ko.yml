@@ -1,8 +1,19 @@
 ko:
+  errors:
+    #format: "%{message}"
   activerecord:
     errors:
       models:
         reply_evaluation:
           attributes:
             user_id:
-              # taken: "이미 평가하셨습니다."
+              taken: "이미 평가하셨습니다."
+        user:
+          attributes:
+            email:
+              taken: "이미 등록된 계정입니다."
+            password:
+              blank: "비밀번호를 입력해주십시오."
+              confirmation: "비밀번호가 서로 일치하지 않습니다."
+            password_confirmation:
+              blank: "비밀번호 확인을 해주십시오."

@@ -4,7 +4,9 @@ Promise::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   namespace :api do
-    devise_for :users, module: "api/users"
+    devise_scope :user do
+      post "users/sign_up", to: "users/registrations#create"
+    end
 
     get "district/sidos"
     get "district/sidos/:id/sigungus", to: "district#sigungus"
