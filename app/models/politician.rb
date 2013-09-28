@@ -12,10 +12,10 @@ class Politician < ActiveRecord::Base
   #     :url => "/system/:attachment/:id/:style/:filename"
   # profile img
   attr_accessible :img
-  has_attached_file :img, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/image/politician/:style/missing.png"
+  has_attached_file :img, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/image/politician/:style/missing.png",:url => "/system/:attachment/:id/:style/:filename"
   # profile img
   attr_accessible :bg_img
-  has_attached_file :bg_img, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/image/politician/:style/missing.png"
+  has_attached_file :bg_img, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/image/politician/:style/missing.png",:url => "/system/:attachment/:id/:style/:filename"
 
   validates :birthday, presence: true
 end
