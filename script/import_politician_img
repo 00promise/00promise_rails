@@ -5,10 +5,10 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
   h = row.to_hash
   puts "**************************************************"
   puts h
-  pwd =`pwd`.chomp
+  pwd =`pwd`
   name=h[:name]
 
-  imagepath = "#{pwd}/public/politician/img/#{h[:id]}_#{name}.png"
+  imagepath = "#{Rails.root}/public/politician/img/#{h[:id]}_#{name}.png"
   #imagepath = imagepath.gsub(/\s+/, " ").delete(" ").delete("\n")
 
   if File.exists?(imagepath.encode("UTF-8"))
@@ -22,7 +22,7 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
     politician.save!
   end
 
-  imagepath = "#{pwd}/public/politician/bg_img/#{h[:id]}_#{name}.png"
+  imagepath = "#{RAails.root}/public/politician/bg_img/#{h[:id]}_bg_#{name}.png"
   #imagepath = imagepath.gsub(/\s+/, " ").delete(" ").delete("\n")
 
   if File.exists?(imagepath.encode("UTF-8"))
