@@ -7,3 +7,7 @@ end
 node :position_name do |p|
   p.position.name
 end
+
+node :party_name do |p|
+  p.party.name
+end
