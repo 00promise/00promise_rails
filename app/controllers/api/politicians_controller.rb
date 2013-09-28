@@ -1,4 +1,4 @@
-class Api::PoliticiansController < ApplicationController
+class Api::PoliticiansController < Api::BaseController
   def show
     @politician = Politician.find(params[:id])
   end
