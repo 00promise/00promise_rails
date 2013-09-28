@@ -14,6 +14,8 @@ Promise::Application.routes.draw do
     get "district/sidos/:id/sigungus", to: "district#sigungus"
     get "district/search", to: "district#search"
 
+    get "elections", to: "elections#index"
+
     get "manifestos/daily"
     get "manifestos/:id", to: "manifestos#show"
     get "manifestos/politician/:id", to: "manifestos#politician"
