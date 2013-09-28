@@ -1,6 +1,11 @@
-object @rating
-attributes :id, :grade
+node :code do
+  @code
+end
 
-child :manifesto do
-  attributes :id, :title, :description, :reply_cnt, :good_cnt, :fair_cnt, :poor_cnt
+node :message do
+  @message
+end
+
+node :data do
+  partial("api/shared/rating", :object => @rating)
 end

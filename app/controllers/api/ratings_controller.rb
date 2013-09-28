@@ -13,6 +13,13 @@ class Api::RatingsController < Api::BaseController
 
   def destroy
     @rating = Rating.find_by_user_id_and_manifesto_id(current_user.id, params[:manifesto_id])
-    @rating && @rating.destroy
+    if @rating
+      @rating.destroy
+      @message = "평가가 삭제되었습니다."
+    else
+      @code = CODE_FAIL
+      @message = "이미 처리되었습니다."
+      render :json => { :code => @code, :message => @message }, :status => 404
+    end
   end
 end
