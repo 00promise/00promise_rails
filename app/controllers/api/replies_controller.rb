@@ -11,6 +11,7 @@ class Api::RepliesController < Api::BaseController
   end
 
   def create
+    #TODO POST 데이터를 검증하기 위해 Reply 모델에 validation 추가
     @reply = Reply.new
     @reply.manifesto_id = params[:manifesto_id]
     @reply.user_id = current_user.id
