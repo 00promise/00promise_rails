@@ -38,10 +38,12 @@ Promise::Application.configure do
   # Paperclip
   #Paperclip.options[:command_path] = "/usr/local/bin/"
   Paperclip.options[:command_path] = "/usr/bin/"
-  config.paperclip_defaults = {
+  Paperclip::Attachment.default_options.update( = {
     :storage => :fog,
     :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public/system"},
-    :fog_directory => "",:fog_host => "http://00promise.org"
+    :fog_directory => "",:fog_host => "http://00promise.org",
+    :url=>"/system/:attachment/:id/:style/:filename",
+    :fog_public => true,
   }
 
 end
