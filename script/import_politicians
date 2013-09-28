@@ -1,0 +1,92 @@
+require 'csv'
+
+csv_text = "script/politicians.csv"
+CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converters => :all) do |row|
+  h = row.to_hash
+  puts "**************************************************"
+  puts h
+
+  # 선거정보 id 확인
+  if h[:election_name].include?("지방")
+    election_id = 1
+    type_code = 3
+  elsif h[:election_name].include?("국회")
+    election_id = 2
+    type_code = 2
+  else
+    election_id = 3
+    type_code = 1
+  end
+  # puts election_id
+
+
+  # 현재 정당정보 id 확인
+  if h[:party_name1].include?("무소속")
+    party1_id = 1
+  elsif h[:party_name1].include?("새누리")
+    party1_id = 2
+  elsif h[:party_name1].include?("민주")
+    party1_id = 3
+  else
+    party1_id = 4
+  end
+  # puts party1_id
+
+
+  # 당선 정당정보 id 확인
+  if h[:party_name2].include?("무소속")
+    party2_id = 1
+  elsif h[:party_name2].include?("새누리")
+    party2_id = 2
+  elsif h[:party_name2].include?("민주당")
+    party2_id = 3
+  elsif h[:party_name2].include?("진보")
+    party2_id = 4
+  elsif h[:party_name2].include?("선진")
+    party2_id = 6
+  elsif h[:party_name2].include?("한나라")
+    party2_id = 7
+  elsif h[:party_name2].include?("민주통합")
+    party2_id = 8
+  elsif h[:party_name2].include?("국민중심")
+    party2_id = 9
+  else
+    party2_id = 10
+  end
+  # puts party2_id
+
+
+  # 직책 정보 저장
+  position = Position.find_by_name(h[:position_name])
+  unless position
+    position = Position.new
+    position.name = h[:position_name]
+    position.type_name = h[:type_name]
+    position.type_code = type_code
+    position.district = h[:district]
+    position.save
+  end
+  # puts position.to_yaml
+
+
+  # 정치인 정보 저장
+  politician = Politician.new
+  politician.id = h[:id].to_s[6..-1].to_i
+  politician.name = h[:name]
+  politician.birthday = h[:birthday]
+  politician.party_id = party1_id
+  politician.memo = h[:memo] ? h[:memo].gsub(/,\s*/, "\n") : ""
+  politician.save
+  # puts politician.to_yaml
+
+
+  # 당선 정보 저장
+  winner = Winner.new
+  winner.election_id = election_id
+  winner.position_id = position.id
+  winner.politician_id = politician.id
+  winner.party_id = party2_id
+  winner.save
+  # puts winner.to_yaml
+end
+
