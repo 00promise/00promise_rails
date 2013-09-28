@@ -2,7 +2,7 @@ class Api::RepliesController < Api::BaseController
   before_filter :auth_user, :except => [:manifesto]
 
   def manifesto
-    count = params[:count] || 20
+    count = params[:count].to_i || 20
     count = 50 if count > 50
     max_id = params[:max_id] || FIXNUM_MAX
 
