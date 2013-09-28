@@ -22,7 +22,7 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
     politician.save!
   end
 
-  imagepath = "#{RAails.root}/public/politician/bg_img/#{h[:id]}_bg_#{name}.png"
+  imagepath = "#{Rails.root}/public/politician/bg_img/#{h[:id]}_bg_#{name}.png"
   #imagepath = imagepath.gsub(/\s+/, " ").delete(" ").delete("\n")
 
   if File.exists?(imagepath.encode("UTF-8"))
