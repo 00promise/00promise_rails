@@ -1,6 +1,11 @@
-object @manifesto
-attributes :id, :title, :description, :reply_cnt, :good_cnt, :fair_cnt, :poor_cnt
+node :code do
+  @code
+end
 
-child :politician do
-  attributes :id, :name, :profile_img, :bg_img
+node :message do
+  @message
+end
+
+node :data do
+  partial("api/shared/manifesto", :object => @manifesto)
 end
