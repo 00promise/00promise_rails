@@ -17,4 +17,6 @@ class Politician < ActiveRecord::Base
   # profile img
   attr_accessible :bg_img
   has_attached_file :bg_img, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/image/politician/:style/missing.png"
+
+  validates :birthday, presence: true
 end
