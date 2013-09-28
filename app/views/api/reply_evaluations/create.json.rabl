@@ -1,9 +1,11 @@
-object @eval
-attributes :id, :reply_id, :user_id, :eval_type
+node :code do
+  @code
+end
 
-child :reply do
-  attributes :id, :content, :agree_cnt, :disagree_cnt, :created_at
-  node :username do |reply|
-    reply.user.email
-  end
+node :message do
+  @message
+end
+
+node :data do
+  partial("api/shared/reply_evaluation", :object => @eval)
 end
