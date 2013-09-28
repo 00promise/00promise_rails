@@ -1,5 +1,6 @@
 class Api::BaseController < ApplicationController
   before_filter :init_api
+  prepend_before_filter :get_auth_token
 
 protected
 
@@ -14,5 +15,11 @@ protected
   def init_api
     @code = CODE_OK
     @message = ""
+  end
+
+  def get_auth_token
+    if auth_token = params[:auth_token].blank? && request.headers["access_token"]
+      params[:auth_token] = auth_token
+    end
   end
 end
