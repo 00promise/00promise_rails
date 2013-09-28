@@ -1,0 +1,38 @@
+require 'csv'
+
+csv_text = "script/politicians.csv"
+CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converters => :all) do |row|
+  h = row.to_hash
+  puts "**************************************************"
+  puts h
+  pwd =`pwd`.chomp
+  name=h[:name]
+
+  imagepath = "#{pwd}/public/politician/img/#{h[:id]}_#{name}.png"
+  #imagepath = imagepath.gsub(/\s+/, " ").delete(" ").delete("\n")
+
+  if File.exists?(imagepath.encode("UTF-8"))
+    p "imgpath #{imagepath}"
+    politician = Politician.find(h[:id].to_s[6..-1].to_i)
+    if politician.birthday.nil?
+      politician.birthday = Time.now
+    end
+    file =File.new(imagepath.encode("UTF-8"))
+    politician.img = file
+    politician.save!
+  end
+
+  imagepath = "#{pwd}/public/politician/bg_img/#{h[:id]}_#{name}.png"
+  #imagepath = imagepath.gsub(/\s+/, " ").delete(" ").delete("\n")
+
+  if File.exists?(imagepath.encode("UTF-8"))
+    p "bg img path #{imagepath}"
+    politician = Politician.find(h[:id].to_s[6..-1].to_i)
+    if politician.birthday.nil?
+      politician.birthday = Time.now
+    end
+    file =File.new(imagepath.encode("UTF-8"))
+    politician.bg_img = file
+    politician.save!
+  end
+end
