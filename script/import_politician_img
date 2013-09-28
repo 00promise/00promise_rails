@@ -17,7 +17,7 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
     if politician.birthday.nil?
       politician.birthday = Time.now
     end
-    file =File.new(imagepath))
+    file =File.new(imagepath)
     politician.img = file
     politician.save!
   end
@@ -25,7 +25,7 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
   imagepath = "#{Rails.root}/public/politician/bg_img/#{h[:id]}_bg_#{name}.png"
   #imagepath = imagepath.gsub(/\s+/, " ").delete(" ").delete("\n")
 
-  if File.exists?(imagepath))
+  if File.exists?(imagepath)
     p "bg img path #{imagepath}"
     politician = Politician.find(h[:id].to_s[6..-1].to_i)
     if politician.birthday.nil?
