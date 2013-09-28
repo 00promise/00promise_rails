@@ -1,1 +1,1 @@
-attributes :code, :name, :full_name
+attributes :id, :code, :name, :full_name, :sido_id
