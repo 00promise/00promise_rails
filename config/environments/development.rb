@@ -35,15 +35,14 @@ Promise::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   config.assets.enabled = true
-  config.assets.paths << "#{Rails.root}/public/system"
   # Paperclip
   #Paperclip.options[:command_path] = "/usr/local/bin/"
   Paperclip.options[:command_path] = "/usr/bin/"
-  config.paperclip_defaults = {
-    :storage => :fog,
-    :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public/system"},
-    :fog_directory => "",:fog_host => "http://00promise.org",
-    :fog_public => true,
-  }
+  # config.paperclip_defaults = {
+  #   :storage => :fog,
+  #   :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public/system"},
+  #   :fog_directory => "",:fog_host => "http://00promise.org",
+  #   :fog_public => true,
+  # }
 
 end
