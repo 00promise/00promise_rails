@@ -7,5 +7,5 @@ node :message do
 end
 
 node :data do
-  partial("api/shared/politician_detail", :object => @politicians)
+  partial("api/shared/politician", :object => @politicians)
 end
