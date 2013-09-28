@@ -9,7 +9,7 @@ class Api::Users::RegistrationsController < Api::BaseController
     else
       warden.custom_failure!
       @code = CODE_FAIL
-      render :json => { :code => @code, :message => @user.errors.full_messages.join(", ") }, :status => 422
+      render :json => { :code => @code, :message => @user.errors.full_messages.join(", ") }
     end
   end
 end

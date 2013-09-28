@@ -9,7 +9,7 @@ class Api::ReplyEvaluationsController < Api::BaseController
     logger.info { @eval.to_yaml }
 
     unless @eval.save
-      render :json => { :success => false, :message => @eval.errors.full_messages.join(", ") }, :status => 403
+      render :json => { :success => false, :message => @eval.errors.full_messages.join(", ") }
     end
   end
 end

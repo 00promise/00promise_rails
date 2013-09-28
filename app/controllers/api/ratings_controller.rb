@@ -19,7 +19,7 @@ class Api::RatingsController < Api::BaseController
     else
       @code = CODE_FAIL
       @message = "이미 처리되었습니다."
-      render :json => { :code => @code, :message => @message }, :status => 404
+      render :json => { :code => @code, :message => @message }
     end
   end
 end

@@ -28,7 +28,7 @@ protected
 
   def invalid_attempt
     warden.custom_failure!
-    @code = CODE_FAIL
-    render :json => { :code => @code, :message => @message }, :status => 401
+    @code = CODE_UNAUHTORHIZED
+    render :json => { :code => @code, :message => @message }
   end
 end
