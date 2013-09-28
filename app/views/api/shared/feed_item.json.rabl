@@ -4,12 +4,6 @@ child :politician do
   extends "api/shared/politician"
 end
 
-child :latest_reply do |reply|
-  attributes :id, :content
-  node :created_at do
-    reply.created_at.to_i
-  end
-  node :username do |reply|
-    reply.user.email
-  end
+child :latest_reply do
+  extends "api/shared/reply"
 end
