@@ -7,41 +7,41 @@ ActiveAdmin.register Manifesto do
 	    f.input :description
 	    f.input :title
 	    f.input :fair_cnt
-      f.input :good_cnt 
+      f.input :good_cnt
       f.input :poor_cnt
       f.input :reply_cnt
-      f.input :politician                
-      f.has_many :replies do |reply_f|
-	    	reply_f.input :content 
-	      reply_f.input :user
-	    end
+      f.input :winner, :as=>:select, :collection=>Winner.all.map(&:politician), :include_blank => false
 	  end
     f.actions
   end
-  index do    
-    selectable_column        
+  index do
+    selectable_column
     column :id do |manifesto|
       link_to manifesto.id, admin_manifesto_path(manifesto)
     end
-    column :title             
+    column :title
     column :fair_cnt
-    column :good_cnt                            
+    column :good_cnt
     column :poor_cnt
     column :reply_cnt
-    column :politician
+    column :winner_name do |winner|
+      link_to winner.politician.name, admin_politician_path(winner.politician)
+    end
     #column :bg_img_html
-    default_actions                   
-  end 
+    default_actions
+  end
 
-  show do 
+  show do
 		attributes_table do
   			row :id
         row :description
         row :fair_cnt
-		    row :good_cnt                            
+		    row :good_cnt
 		    row :poor_cnt
 		    row :reply_cnt
-		    row :politician
+		    row :winner_name do |winner|
+        link_to winner.politician.name, admin_politician_path(winner.politician)
+      end
  		end
  		panel 'Reply' do
       table_for manifesto.replies do
