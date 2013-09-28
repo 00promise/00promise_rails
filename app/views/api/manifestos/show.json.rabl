@@ -7,5 +7,5 @@ node :message do
 end
 
 node :data do
-  partial("api/shared/manifesto", :object => @manifesto)
+  partial("api/shared/manifesto_detail", :object => @manifesto)
 end

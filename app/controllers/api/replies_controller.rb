@@ -1,6 +1,7 @@
 class Api::RepliesController < Api::BaseController
   before_filter :auth_user, :except => [:manifesto]
 
+  # GET /api/replies/manifesto/:id.json
   def manifesto
     count = params[:count].to_i || 20
     count = 50 if count > 50
