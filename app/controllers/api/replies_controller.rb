@@ -3,8 +3,7 @@ class Api::RepliesController < Api::BaseController
 
   # GET /api/replies/manifesto/:id.json
   def manifesto
-    count = params[:count].to_i || 20
-    count = 50 if count > 50
+    count = params[:count] || 20
     max_id = params[:max_id] || FIXNUM_MAX
 
     @manifesto = Manifesto.find(params[:id])
