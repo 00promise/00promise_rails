@@ -13,4 +13,25 @@ ActiveAdmin.register Reply do
 	  end
     f.actions
   end
+
+  index do
+    selectable_column
+    column :id do |reply|
+      link_to reply.id, admin_reply_path(reply)
+    end
+    column :content
+    column :user
+    column :manifesto
+
+    default_actions
+  end
+
+  show do
+    attributes_table do
+        row :id
+        row :content
+        row :user
+        row :manifesto
+    end
+  end
 end

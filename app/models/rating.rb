@@ -1,6 +1,7 @@
 class Rating < ActiveRecord::Base
   attr_accessible :grade, :manifesto_id, :user_id
   belongs_to :manifesto
+  belongs_to :user
   after_create :after_create
   after_update :after_update
   after_destroy :after_destroy
