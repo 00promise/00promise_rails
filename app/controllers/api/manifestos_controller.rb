@@ -1,6 +1,7 @@
 class Api::ManifestosController < Api::BaseController
   def show
     @manifesto = Manifesto.find(params[:id])
+    @manifesto.init_rating_status(current_user)
   end
 
   def daily
