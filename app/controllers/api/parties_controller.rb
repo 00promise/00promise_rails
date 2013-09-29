@@ -5,6 +5,6 @@ class Api::PartiesController < Api::BaseController
 
   def politicians
     @party = Party.find(params[:id])
-    @politicians = @party.politicians
+    @politicians = @party.politicians.limit(30)
   end
 end

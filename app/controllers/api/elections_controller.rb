@@ -5,6 +5,6 @@ class Api::ElectionsController < Api::BaseController
 
   def politicians
     election = Election.find(params[:id])
-    @politicians = election.politicians.order("name")
+    @politicians = election.politicians.order("name").limit(30)
   end
 end
