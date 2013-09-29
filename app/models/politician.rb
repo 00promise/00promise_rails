@@ -19,7 +19,7 @@ class Politician < ActiveRecord::Base
   attr_accessible :bg_img
   has_attached_file :bg_img, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://00promise.org/img/feed_bg_00.png",
       :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
-      :url => "/http://00promise.org/system/:attachment/:id/:style/:filename"
+      :url => "http://00promise.org/system/:attachment/:id/:style/:filename"
 
   validates :birthday, presence: true
 end
