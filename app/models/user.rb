@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
   validates :password_confirmation, presence: true
+  has_many :ratings
 
   def masked_name
     name = self.email.split("@")[0]

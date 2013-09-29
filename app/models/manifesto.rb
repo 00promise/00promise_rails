@@ -10,4 +10,16 @@ class Manifesto < ActiveRecord::Base
   def politician
     self.winner.politician
   end
+
+  def init_rating_status(user)
+    return unless user
+
+    if rating = self.ratings.where("user_id = ?", user.id).first
+      @rating_grade = rating.grade
+    end
+  end
+
+  def rating_status
+    @rating_grade || 0
+  end
 end
