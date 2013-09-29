@@ -36,6 +36,8 @@ Promise::Application.configure do
   config.assets.debug = true
   config.assets.enabled = true
   config.serve_static_assets = true
+  config.assets.compile = false
+  config.assets.digest = true
   # Paperclip
   #Paperclip.options[:command_path] = "/usr/local/bin/"
   Paperclip.options[:command_path] = "/usr/bin/"
