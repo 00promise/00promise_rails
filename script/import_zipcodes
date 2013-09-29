@@ -3,8 +3,7 @@ while (line = file.gets)
   puts '**************************************************'
   puts line
 
-  code, sido_name, name = line.split(",")
-  puts code
+  sido_name, name = line.split(",")
   puts sido_name
   puts name
   sido = Sido.find_by_name(sido_name)
