@@ -19,6 +19,7 @@ Promise::Application.routes.draw do
 
     get "manifestos/daily"
     get "manifestos/:id", to: "manifestos#show"
+    post "manifestos/:id", to: "manifestos#show"
     get "manifestos/politician/:id", to: "manifestos#politician"
 
     get "parties", to: "parties#index"
@@ -33,7 +34,6 @@ Promise::Application.routes.draw do
     post "ratings/destroy"
 
     get "replies/manifesto/:id", to: "replies#manifesto"
-    post "replies/manifesto/:id", to: "replies#manifesto"
     post "replies/create"
     post "replies/destroy"
     # post "replies/report"

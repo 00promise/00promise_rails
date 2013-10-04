@@ -1,6 +1,7 @@
 class Api::RatingsController < Api::BaseController
   before_filter :auth_user
 
+  # POST ratings/update.json
   def update
     hash = {}
     hash[:user_id] = current_user.id
@@ -11,6 +12,7 @@ class Api::RatingsController < Api::BaseController
     @rating.save
   end
 
+  # POST ratings/destroy.json
   def destroy
     @rating = Rating.find_by_user_id_and_manifesto_id(current_user.id, params[:manifesto_id])
     if @rating
