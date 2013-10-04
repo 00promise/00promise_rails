@@ -22,4 +22,8 @@ protected
       params[:auth_token] = auth_token
     end
   end
+
+  def render_error
+    render :json => { :code => @code, :message => @message }
+  end
 end

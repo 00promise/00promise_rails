@@ -26,6 +26,7 @@ Promise::Application.routes.draw do
 
     get "politicians/search"
     get "politicians/my_district/:id", to: "politicians#my_district"
+    get "politicians/my_location", to: "politicians#my_location"
     get "politicians/:id", to: "politicians#show"
 
     post "ratings/update"
