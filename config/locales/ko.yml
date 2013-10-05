@@ -1,6 +1,6 @@
 ko:
   errors:
-    #format: "%{message}"
+    format: "%{message}"
   activerecord:
     errors:
       models:
@@ -8,6 +8,10 @@ ko:
           attributes:
             user_id:
               taken: "이미 평가하셨습니다."
+        reply_report:
+          attributes:
+            user_id:
+              taken: "이미 신고된 댓글이여서 관리자 확인중입니다."
         user:
           attributes:
             email:

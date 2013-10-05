@@ -39,6 +39,8 @@ Promise::Application.routes.draw do
     # post "replies/report"
 
     post "reply_evaluations/create"
+
+    post "reply_reports/create"
   end
 
   resources :parties
