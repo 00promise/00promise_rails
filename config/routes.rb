@@ -51,7 +51,7 @@ Promise::Application.routes.draw do
   resources :replies
   resources :reply_evaluations
 
-
+  match '/ios', :to => redirect('/00Promise.ipa')
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
