@@ -6,7 +6,7 @@ class Api::PoliticiansController < Api::BaseController
 
   # GET politicians/search.json
   def search
-    @politicians = Politician.where("name LIKE :q", q: "#{params[:q]}%")
+    @politicians = Politician.where("name LIKE :q", q: "%#{params[:q]}%")
   end
 
   # GET politicians/my_district/:id.json

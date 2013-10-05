@@ -8,6 +8,6 @@ class Api::DistrictController < Api::BaseController
   end
 
   def search
-    @sigungus = Sigungu.where("name LIKE :q", q: "#{params[:q]}%")
+    @sigungus = Sigungu.where("full_name LIKE :q", q: "%#{params[:q]}%")
   end
 end
