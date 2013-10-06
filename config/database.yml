@@ -28,4 +28,5 @@ test:
 
 production:
   <<: *mysql
+  database: 00promise00
   pool: 5
