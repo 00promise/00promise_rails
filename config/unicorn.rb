@@ -25,8 +25,7 @@ working_directory File.expand_path("../..", __FILE__)
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-#listen "/path/to/.unicorn.sock", :backlog => 64
-listen 3000
+listen "/srv/shared/sockets/unicorn.sock", :backlog => 64
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
