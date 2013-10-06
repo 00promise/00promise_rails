@@ -36,6 +36,7 @@ end
 gem 'mysql2'
 gem 'oj'
 gem 'rabl'
+gem 'rack-ssl-enforcer'
 gem 'rails-i18n'
 gem 'seed_dump'
 gem 'unicorn'
