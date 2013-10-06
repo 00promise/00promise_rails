@@ -1,5 +1,5 @@
 #load "deploy/assets"
-#require "bundler/capistrano"
+require "bundler/capistrano"
 require 'capistrano-unicorn'
 
 set :application, "00promise_rails"
