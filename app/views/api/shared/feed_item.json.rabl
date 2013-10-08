@@ -4,6 +4,6 @@ child :politician do
   extends "api/shared/politician"
 end
 
-child :latest_reply do
+child :best_agreed_reply do
   extends "api/shared/reply"
 end

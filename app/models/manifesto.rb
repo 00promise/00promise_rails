@@ -6,10 +6,17 @@ class Manifesto < ActiveRecord::Base
   belongs_to :winner
   has_many :ratings
   has_many :replies
-  has_one :latest_reply, class_name: "Reply", order: "id DESC"
 
   def best_replies
     self.replies.where("agree_cnt >= 10").order("agree_cnt DESC").limit(3)
+  end
+
+  def best_agreed_reply
+    reply = self.replies.order("agree_cnt DESC").first
+    if reply.agree_cnt >= 10
+      reply.is_best = true
+    end
+    reply
   end
 
   def politician
