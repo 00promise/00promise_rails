@@ -11,12 +11,12 @@ class User < ActiveRecord::Base
   has_many :ratings
 
   def masked_name
-    name = self.email.split("@")[0]
+    name, domain = self.email.split("@")
 
     if name.length <= 3
-      name
+      name + "@" + domain
     else
-      name[0, 3] + name[3..name.length].gsub(/./, '*')
+      name[0, 3] + name[3..name.length].gsub(/./, '*') + "@" + domain
     end
   end
 end
