@@ -1,4 +1,4 @@
-attributes :id, :content, :agree_cnt, :disagree_cnt
+attributes :id, :content, :agree_cnt, :disagree_cnt, :is_best
 
 node :username do |reply|
   reply.user.masked_name

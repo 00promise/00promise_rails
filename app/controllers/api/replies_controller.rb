@@ -8,6 +8,15 @@ class Api::RepliesController < Api::BaseController
 
     @manifesto = Manifesto.find(params[:id])
     @replies = @manifesto.replies.where("id < ?", max_id).order("id DESC").limit(count)
+
+    # 더보기가 아닌 경우에만 베플을 추가
+    if max_id == FIXNUM_MAX
+      beples = @manifesto.best_replies
+      if beples.any?
+        beples.each { |e| e.is_best = true }
+        @replies = beples + @replies
+      end
+    end
   end
 
   def create
@@ -30,9 +39,5 @@ class Api::RepliesController < Api::BaseController
       @message = "이미 처리되었습니다."
       render :json => { :code => @code, :message => @message }
     end
-  end
-
-  def report
-    #TODO 댓글 신고에 대한 기획이 나온 후에 구현
   end
 end
