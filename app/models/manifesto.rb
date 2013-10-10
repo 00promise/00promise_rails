@@ -13,6 +13,9 @@ class Manifesto < ActiveRecord::Base
 
   def best_agreed_reply
     reply = self.replies.order("agree_cnt DESC").first
+
+    return nil unless reply
+
     if reply.agree_cnt >= 10
       reply.is_best = true
     end
