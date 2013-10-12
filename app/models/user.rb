@@ -10,6 +10,16 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   has_many :ratings
 
+  class << self
+    def current_user=(user)
+      Thread.current[:current_user] = user
+    end
+
+    def current_user
+      Thread.current[:current_user]
+    end
+  end
+
   def masked_name
     name, domain = self.email.split("@")
 
