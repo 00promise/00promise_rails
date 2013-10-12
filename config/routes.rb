@@ -36,9 +36,10 @@ Promise::Application.routes.draw do
     get "replies/manifesto/:id", to: "replies#manifesto"
     post "replies/create"
     post "replies/destroy"
-    # post "replies/report"
 
     post "reply_evaluations/create"
+    post "reply_evaluations/update"
+    post "reply_evaluations/destroy"
 
     post "reply_reports/create"
   end
