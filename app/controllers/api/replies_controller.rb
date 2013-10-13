@@ -25,6 +25,7 @@ class Api::RepliesController < Api::BaseController
     @reply.manifesto_id = params[:manifesto_id]
     @reply.user_id = current_user.id
     @reply.content = params[:content]
+    @reply.is_owner = true
     @reply.save
     @message = "댓글이 작성되었습니다."
   end
