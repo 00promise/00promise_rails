@@ -1,4 +1,57 @@
 Promise::Application.routes.draw do
+  devise_for :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  namespace :api do
+    devise_scope :user do
+      post "users/sign_up", to: "users/registrations#create"
+      post "users/sign_in", to: "users/sessions#create"
+      post "users/sign_out", to: "users/sessions#destroy"
+    end
+
+    get "district/sidos"
+    get "district/sidos/:id/sigungus", to: "district#sigungus"
+    get "district/search", to: "district#search"
+
+    get "elections", to: "elections#index"
+    get "elections/:id/politicians", to: "elections#politicians"
+
+    get "manifestos/daily"
+    get "manifestos/:id", to: "manifestos#show"
+    post "manifestos/:id", to: "manifestos#show"
+    get "manifestos/politician/:id", to: "manifestos#politician"
+
+    get "parties", to: "parties#index"
+    get "parties/:id/politicians", to: "parties#politicians"
+
+    get "politicians/search"
+    get "politicians/my_district/:id", to: "politicians#my_district"
+    get "politicians/my_location", to: "politicians#my_location"
+    get "politicians/:id", to: "politicians#show"
+
+    post "ratings/update"
+    post "ratings/destroy"
+
+    get "replies/manifesto/:id", to: "replies#manifesto"
+    post "replies/create"
+    post "replies/destroy"
+    # post "replies/report"
+
+    post "reply_evaluations/create"
+
+    post "reply_reports/create"
+  end
+
+  resources :parties
+  resources :positions
+  resources :manifestos
+  resources :politicians
+  resources :ratings
+  resources :replies
+  resources :reply_evaluations
+
+  match '/ios', :to => redirect('/00Promise.ipa')
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

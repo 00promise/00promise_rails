@@ -12,7 +12,7 @@ Promise::Application.configure do
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
-
+  config.serve_static_assets = true
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
@@ -34,4 +34,18 @@ Promise::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  # config.assets.enabled = true
+  # config.serve_static_assets = true
+  # config.assets.compile = false
+  # config.assets.digest = true
+  # Paperclip
+  #Paperclip.options[:command_path] = "/usr/local/bin/"
+  Paperclip.options[:command_path] = "/usr/bin/"
+  # config.paperclip_defaults = {
+  #   :storage => :fog,
+  #   :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public/system"},
+  #   :fog_directory => "",:fog_host => "http://00promise.org",
+  #   :fog_public => true,
+  # }
+
 end
