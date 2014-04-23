@@ -42,6 +42,10 @@ Promise::Application.routes.draw do
     post "reply_evaluations/destroy"
 
     post "reply_reports/create"
+
+    get "versus", to: "versus#index"
+    get "versus/:id", to: "versus#show"
+    post "versus/:id/vote", to: "versus#vote"
   end
 
   resources :parties

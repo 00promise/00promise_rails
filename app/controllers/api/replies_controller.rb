@@ -21,13 +21,28 @@ class Api::RepliesController < Api::BaseController
 
   def create
     #TODO POST 데이터를 검증하기 위해 Reply 모델에 validation 추가
-    @reply = Reply.new
-    @reply.manifesto_id = params[:manifesto_id]
+    #Polymorphic 스타일로 변경
+    if params[:manifesto_id]
+      manifesto = Manifesto.find(params[:manifesto_id])
+      @reply = manifesto.replies.new
+    else
+      versus = Versus.find(params[:versus_id])
+      @reply = versus.replies.new
+    end
+
     @reply.user_id = current_user.id
     @reply.content = params[:content]
     @reply.is_owner = true
     @reply.save
     @message = "댓글이 작성되었습니다."
+
+    #@reply = Reply.new
+    #@reply.manifesto_id = params[:manifesto_id]
+    #@reply.user_id = current_user.id
+    #@reply.content = params[:content]
+    #@reply.is_owner = true
+    #@reply.save
+    #@message = "댓글이 작성되었습니다."
   end
 
   def destroy

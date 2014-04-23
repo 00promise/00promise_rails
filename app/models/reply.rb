@@ -4,9 +4,11 @@ class Reply < ActiveRecord::Base
 
   attr_accessible :agree_cnt, :content, :disagree_cnt, :manifesto_id, :status, :user_id
   attr_accessor :is_best, :is_owner, :user_eval_type
-  belongs_to :manifesto, counter_cache: :reply_cnt
+
+  #belongs_to :manifesto, counter_cache: :reply_cnt
+  belongs_to :replyable, polymorphic: true, counter_cache: true
   belongs_to :user
-  has_many :reply_evaluations
+  has_many :reply_evaluations, dependent: :destroy
 
   def set_virtual_attributes
     @is_best = false

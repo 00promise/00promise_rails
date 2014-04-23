@@ -8,8 +8,7 @@ ActiveAdmin.register Reply do
   	f.inputs "Reply" do
 	    f.input :content, :include_blank => false
 	    f.input :user, :as=>:select, :collection=>User.all.map(&:email), :include_blank => false
-	    f.input :manifesto, :include_blank => false
-
+	    #f.input :replyable, :include_blank => false
 	  end
     f.actions
   end
@@ -21,7 +20,7 @@ ActiveAdmin.register Reply do
     end
     column :content
     column :user
-    column :manifesto
+    #column :manifesto
 
     default_actions
   end
@@ -31,7 +30,7 @@ ActiveAdmin.register Reply do
         row :id
         row :content
         row :user
-        row :manifesto
+        row :replyable
     end
   end
 end

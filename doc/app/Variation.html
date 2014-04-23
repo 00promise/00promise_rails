@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>module Variation - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/variation.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-decrement_with_sql-21">#decrement_with_sql!</a>
+    
+    <li><a href="#method-i-increment_with_sql-21">#increment_with_sql!</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Api.html">Api</a>
+  
+    <li><a href="./Api/BaseController.html">Api::BaseController</a>
+  
+    <li><a href="./Api/DistrictController.html">Api::DistrictController</a>
+  
+    <li><a href="./Api/ElectionsController.html">Api::ElectionsController</a>
+  
+    <li><a href="./Api/ManifestosController.html">Api::ManifestosController</a>
+  
+    <li><a href="./Api/ManifestosHelper.html">Api::ManifestosHelper</a>
+  
+    <li><a href="./Api/PartiesController.html">Api::PartiesController</a>
+  
+    <li><a href="./Api/PartiesHelper.html">Api::PartiesHelper</a>
+  
+    <li><a href="./Api/PoliticiansController.html">Api::PoliticiansController</a>
+  
+    <li><a href="./Api/PoliticiansHelper.html">Api::PoliticiansHelper</a>
+  
+    <li><a href="./Api/RatingsController.html">Api::RatingsController</a>
+  
+    <li><a href="./Api/RatingsHelper.html">Api::RatingsHelper</a>
+  
+    <li><a href="./Api/RepliesController.html">Api::RepliesController</a>
+  
+    <li><a href="./Api/RepliesHelper.html">Api::RepliesHelper</a>
+  
+    <li><a href="./Api/ReplyEvaluationsController.html">Api::ReplyEvaluationsController</a>
+  
+    <li><a href="./Api/ReplyReportsController.html">Api::ReplyReportsController</a>
+  
+    <li><a href="./Api/Users.html">Api::Users</a>
+  
+    <li><a href="./Api/Users/RegistrationsController.html">Api::Users::RegistrationsController</a>
+  
+    <li><a href="./Api/Users/SessionsController.html">Api::Users::SessionsController</a>
+  
+    <li><a href="./AdminUser.html">AdminUser</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Election.html">Election</a>
+  
+    <li><a href="./ElectionDecorator.html">ElectionDecorator</a>
+  
+    <li><a href="./Manifesto.html">Manifesto</a>
+  
+    <li><a href="./ManifestoDecorator.html">ManifestoDecorator</a>
+  
+    <li><a href="./MyDistrict.html">MyDistrict</a>
+  
+    <li><a href="./Party.html">Party</a>
+  
+    <li><a href="./PartyDecorator.html">PartyDecorator</a>
+  
+    <li><a href="./Politician.html">Politician</a>
+  
+    <li><a href="./PoliticianDecorator.html">PoliticianDecorator</a>
+  
+    <li><a href="./Position.html">Position</a>
+  
+    <li><a href="./PositionDecorator.html">PositionDecorator</a>
+  
+    <li><a href="./Rating.html">Rating</a>
+  
+    <li><a href="./RatingDecorator.html">RatingDecorator</a>
+  
+    <li><a href="./Reply.html">Reply</a>
+  
+    <li><a href="./ReplyDecorator.html">ReplyDecorator</a>
+  
+    <li><a href="./ReplyEvaluation.html">ReplyEvaluation</a>
+  
+    <li><a href="./ReplyEvaluationDecorator.html">ReplyEvaluationDecorator</a>
+  
+    <li><a href="./ReplyReport.html">ReplyReport</a>
+  
+    <li><a href="./Sido.html">Sido</a>
+  
+    <li><a href="./Sigungu.html">Sigungu</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./Variation.html">Variation</a>
+  
+    <li><a href="./Winner.html">Winner</a>
+  
+    <li><a href="./WinnerDecorator.html">WinnerDecorator</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module Variation</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-decrement_with_sql-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">decrement_with_sql!</span><span
+            class="method-args">(attribute, by = 1)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="decrement_with_sql-21-source">
+            <pre><span class="ruby-comment"># File app/models/variation.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">decrement_with_sql!</span>(<span class="ruby-identifier">attribute</span>, <span class="ruby-identifier">by</span> = <span class="ruby-value">1</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>(<span class="ruby-node">&quot;Invalid attribute: #{attribute}&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">attribute_names</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">attribute</span>.<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-identifier">original_value_sql</span> = <span class="ruby-node">&quot;CASE WHEN #{attribute} IS NULL THEN 0 ELSE #{attribute} END&quot;</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">update_all</span>(<span class="ruby-node">&quot;#{attribute} = #{original_value_sql} - #{by.to_i}&quot;</span>, <span class="ruby-node">&quot;id = #{id}&quot;</span>)
+  <span class="ruby-identifier">reload</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- decrement_with_sql-21-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- decrement_with_sql-21-method -->
+
+    
+      <div id="method-i-increment_with_sql-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">increment_with_sql!</span><span
+            class="method-args">(attribute, by = 1)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="increment_with_sql-21-source">
+            <pre><span class="ruby-comment"># File app/models/variation.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">increment_with_sql!</span>(<span class="ruby-identifier">attribute</span>, <span class="ruby-identifier">by</span> = <span class="ruby-value">1</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>(<span class="ruby-node">&quot;Invalid attribute: #{attribute}&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">attribute_names</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">attribute</span>.<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-identifier">original_value_sql</span> = <span class="ruby-node">&quot;CASE WHEN #{attribute} IS NULL THEN 0 ELSE #{attribute} END&quot;</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">update_all</span>(<span class="ruby-node">&quot;#{attribute} = #{original_value_sql} + #{by.to_i}&quot;</span>, <span class="ruby-node">&quot;id = #{id}&quot;</span>)
+  <span class="ruby-identifier">reload</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- increment_with_sql-21-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- increment_with_sql-21-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

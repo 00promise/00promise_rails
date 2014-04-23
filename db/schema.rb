@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131005130637) do
+ActiveRecord::Schema.define(:version => 20140422091505) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -59,12 +59,12 @@ ActiveRecord::Schema.define(:version => 20131005130637) do
     t.integer  "winner_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "reply_cnt",   :default => 0
-    t.integer  "good_cnt",    :default => 0
-    t.integer  "fair_cnt",    :default => 0
-    t.integer  "poor_cnt",    :default => 0
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.integer  "good_cnt",      :default => 0
+    t.integer  "fair_cnt",      :default => 0
+    t.integer  "poor_cnt",      :default => 0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "replies_count", :default => 0, :null => false
   end
 
   create_table "my_districts", :force => true do |t|
@@ -122,13 +122,18 @@ ActiveRecord::Schema.define(:version => 20131005130637) do
   create_table "replies", :force => true do |t|
     t.integer  "manifesto_id"
     t.integer  "user_id"
-    t.string   "status",       :limit => 10, :default => "normal"
+    t.string   "status",         :limit => 10, :default => "normal"
     t.text     "content"
-    t.integer  "agree_cnt",                  :default => 0
-    t.integer  "disagree_cnt",               :default => 0
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
+    t.integer  "agree_cnt",                    :default => 0
+    t.integer  "disagree_cnt",                 :default => 0
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.integer  "replyable_id"
+    t.string   "replyable_type"
   end
+
+  add_index "replies", ["replyable_id"], :name => "index_replies_on_replyable_id"
+  add_index "replies", ["replyable_type"], :name => "index_replies_on_replyable_type"
 
   create_table "reply_evaluations", :force => true do |t|
     t.integer  "reply_id"
@@ -180,6 +185,33 @@ ActiveRecord::Schema.define(:version => 20131005130637) do
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "versus", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "votes_count",      :default => 0
+    t.integer  "politician_l_id"
+    t.integer  "politician_r_id"
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
+    t.datetime "start_date",       :default => '2014-04-22 04:41:28', :null => false
+    t.datetime "end_date",         :default => '2014-04-22 04:41:28', :null => false
+    t.boolean  "visible",          :default => false
+    t.integer  "votes_l_count",    :default => 0
+    t.integer  "votes_r_count",    :default => 0
+    t.integer  "replies_count",    :default => 0,                     :null => false
+    t.string   "bg_img_file_name"
+    t.string   "bg_content_type"
+    t.integer  "bg_file_size"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "versus_id"
+    t.integer  "user_id"
+    t.integer  "vote_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "winners", :force => true do |t|
     t.integer  "election_id"

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Api::BaseController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/api/base_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="../ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-auth_user">#auth_user</a>
+    
+    <li><a href="#method-i-init_api">#init_api</a>
+    
+    <li><a href="#method-i-render_error">#render_error</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Api.html">Api</a>
+  
+    <li><a href="../Api/BaseController.html">Api::BaseController</a>
+  
+    <li><a href="../Api/DistrictController.html">Api::DistrictController</a>
+  
+    <li><a href="../Api/ElectionsController.html">Api::ElectionsController</a>
+  
+    <li><a href="../Api/ManifestosController.html">Api::ManifestosController</a>
+  
+    <li><a href="../Api/ManifestosHelper.html">Api::ManifestosHelper</a>
+  
+    <li><a href="../Api/PartiesController.html">Api::PartiesController</a>
+  
+    <li><a href="../Api/PartiesHelper.html">Api::PartiesHelper</a>
+  
+    <li><a href="../Api/PoliticiansController.html">Api::PoliticiansController</a>
+  
+    <li><a href="../Api/PoliticiansHelper.html">Api::PoliticiansHelper</a>
+  
+    <li><a href="../Api/RatingsController.html">Api::RatingsController</a>
+  
+    <li><a href="../Api/RatingsHelper.html">Api::RatingsHelper</a>
+  
+    <li><a href="../Api/RepliesController.html">Api::RepliesController</a>
+  
+    <li><a href="../Api/RepliesHelper.html">Api::RepliesHelper</a>
+  
+    <li><a href="../Api/ReplyEvaluationsController.html">Api::ReplyEvaluationsController</a>
+  
+    <li><a href="../Api/ReplyReportsController.html">Api::ReplyReportsController</a>
+  
+    <li><a href="../Api/Users.html">Api::Users</a>
+  
+    <li><a href="../Api/Users/RegistrationsController.html">Api::Users::RegistrationsController</a>
+  
+    <li><a href="../Api/Users/SessionsController.html">Api::Users::SessionsController</a>
+  
+    <li><a href="../AdminUser.html">AdminUser</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Election.html">Election</a>
+  
+    <li><a href="../ElectionDecorator.html">ElectionDecorator</a>
+  
+    <li><a href="../Manifesto.html">Manifesto</a>
+  
+    <li><a href="../ManifestoDecorator.html">ManifestoDecorator</a>
+  
+    <li><a href="../MyDistrict.html">MyDistrict</a>
+  
+    <li><a href="../Party.html">Party</a>
+  
+    <li><a href="../PartyDecorator.html">PartyDecorator</a>
+  
+    <li><a href="../Politician.html">Politician</a>
+  
+    <li><a href="../PoliticianDecorator.html">PoliticianDecorator</a>
+  
+    <li><a href="../Position.html">Position</a>
+  
+    <li><a href="../PositionDecorator.html">PositionDecorator</a>
+  
+    <li><a href="../Rating.html">Rating</a>
+  
+    <li><a href="../RatingDecorator.html">RatingDecorator</a>
+  
+    <li><a href="../Reply.html">Reply</a>
+  
+    <li><a href="../ReplyDecorator.html">ReplyDecorator</a>
+  
+    <li><a href="../ReplyEvaluation.html">ReplyEvaluation</a>
+  
+    <li><a href="../ReplyEvaluationDecorator.html">ReplyEvaluationDecorator</a>
+  
+    <li><a href="../ReplyReport.html">ReplyReport</a>
+  
+    <li><a href="../Sido.html">Sido</a>
+  
+    <li><a href="../Sigungu.html">Sigungu</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../Variation.html">Variation</a>
+  
+    <li><a href="../Winner.html">Winner</a>
+  
+    <li><a href="../WinnerDecorator.html">WinnerDecorator</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Api::BaseController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
+
+    
+      <div id="method-i-auth_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">auth_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>prepend_before_filter :get_auth_token</p>
+          
+
+          
+          <div class="method-source-code" id="auth_user-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/base_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">auth_user</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user_signed_in?</span>
+    <span class="ruby-ivar">@message</span> = <span class="ruby-string">&quot;로그인이 필요합니다.&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:code</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CODE_UNAUHTORHIZED</span>, <span class="ruby-value">:message</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@message</span> }
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- auth_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- auth_user-method -->
+
+    
+      <div id="method-i-init_api" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">init_api</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="init_api-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/base_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">init_api</span>
+  <span class="ruby-ivar">@code</span> = <span class="ruby-constant">CODE_OK</span>
+  <span class="ruby-ivar">@message</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- init_api-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- init_api-method -->
+
+    
+      <div id="method-i-render_error" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_error</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>def get_auth_token</p>
+
+<pre>if auth_token = params[:auth_token].blank? &amp;&amp; request.headers[&quot;access_token&quot;]
+  params[:auth_token] = auth_token
+end</pre>
+
+<p>end</p>
+          
+
+          
+          <div class="method-source-code" id="render_error-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/base_controller.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_error</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:code</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@code</span>, <span class="ruby-value">:message</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@message</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- render_error-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- render_error-method -->
+
+    
+    </section><!-- protected-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
