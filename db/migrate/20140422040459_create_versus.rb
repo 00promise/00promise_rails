@@ -1,6 +1,6 @@
 class CreateVersus < ActiveRecord::Migration
   def change
-    create_table :versus do |t|
+    create_table :versus, :options => 'ENGINE=InnoDB DEFAULT CHARSET=utf8' do |t|
       t.string :title, null: false
       t.text :description
       t.has_attached_file :bg_img

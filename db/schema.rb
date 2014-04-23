@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140422091505) do
+ActiveRecord::Schema.define(:version => 20140423012632) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -53,6 +53,24 @@ ActiveRecord::Schema.define(:version => 20140422091505) do
     t.integer  "ord",        :default => 999
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
+  end
+
+  create_table "issues", :force => true do |t|
+    t.string   "title"
+    t.integer  "replies_count"
+    t.integer  "issue_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "politician_id"
+  end
+
+  create_table "links", :force => true do |t|
+    t.string   "title"
+    t.string   "press"
+    t.integer  "issue_id"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "manifestos", :force => true do |t|
@@ -187,22 +205,26 @@ ActiveRecord::Schema.define(:version => 20140422091505) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "versus", :force => true do |t|
-    t.string   "title"
+    t.string   "title",                                                  :null => false
     t.text     "description"
-    t.integer  "votes_count",      :default => 0
-    t.integer  "politician_l_id"
-    t.integer  "politician_r_id"
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
-    t.datetime "start_date",       :default => '2014-04-22 04:41:28', :null => false
-    t.datetime "end_date",         :default => '2014-04-22 04:41:28', :null => false
-    t.boolean  "visible",          :default => false
-    t.integer  "votes_l_count",    :default => 0
-    t.integer  "votes_r_count",    :default => 0
-    t.integer  "replies_count",    :default => 0,                     :null => false
     t.string   "bg_img_file_name"
-    t.string   "bg_content_type"
-    t.integer  "bg_file_size"
+    t.string   "bg_img_content_type"
+    t.integer  "bg_img_file_size"
+    t.datetime "bg_img_updated_at"
+    t.integer  "votes_count",         :default => 0,                     :null => false
+    t.integer  "votes_l_count",       :default => 0,                     :null => false
+    t.integer  "votes_r_count",       :default => 0,                     :null => false
+    t.integer  "replies_cnt",         :default => 0,                     :null => false
+    t.datetime "start_date",          :default => '2014-04-23 01:14:46', :null => false
+    t.datetime "end_date",            :default => '2014-04-23 01:14:46', :null => false
+    t.boolean  "versus",              :default => false
+    t.boolean  "visible",             :default => false
+    t.boolean  "boolean",             :default => false
+    t.integer  "politician_l_id",                                        :null => false
+    t.integer  "politician_r_id",                                        :null => false
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
+    t.integer  "replies_count",       :default => 0,                     :null => false
   end
 
   create_table "votes", :force => true do |t|

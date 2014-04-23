@@ -25,9 +25,12 @@ class Api::RepliesController < Api::BaseController
     if params[:manifesto_id]
       manifesto = Manifesto.find(params[:manifesto_id])
       @reply = manifesto.replies.new
-    else
+    elsif params[:versus_id]
       versus = Versus.find(params[:versus_id])
       @reply = versus.replies.new
+    else
+      issue = Issue.find(params[:issue_id])
+      @reply = issue.replies.new
     end
 
     @reply.user_id = current_user.id

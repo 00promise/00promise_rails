@@ -46,6 +46,9 @@ Promise::Application.routes.draw do
     get "versus", to: "versus#index"
     get "versus/:id", to: "versus#show"
     post "versus/:id/vote", to: "versus#vote"
+
+    get "issues", to: "issues#index"
+    get "issues/:id", to: "issues#show"
   end
 
   resources :parties

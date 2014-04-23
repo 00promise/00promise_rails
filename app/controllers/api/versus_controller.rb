@@ -1,7 +1,7 @@
 class Api::VersusController < Api::BaseController
   before_filter :auth_user, except: [:index, :show]
   def index
-    @versus = Versus.includes([:politician_l, :politician_r, :replies]).order("id desc").limit(1)
+    @versus = Versus.includes([:politician_l, :politician_r, :replies]).order("updated_at desc").limit(1)
   end
   def show
     @versus = Versus.find(params[:id])
