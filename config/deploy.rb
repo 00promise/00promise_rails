@@ -9,7 +9,7 @@ set :scm, :git
 set :branch, "develop" #cap -S branch=branchname deploy
 set :keep_releases, 5
 set :user, "root"
-set :rails_env, "production"
+set :rails_env, "development"
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
@@ -20,7 +20,7 @@ set :rails_env, "production"
 
 server "211.110.130.122", :app, :web, :db
 
-set :deploy_to, "/srv"
+set :deploy_to, "/srv2"
 set :deploy_via, :remote_cache
 
 after 'deploy:restart', 'unicorn:reload'   # app IS NOT preloaded
