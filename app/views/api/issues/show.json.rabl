@@ -7,5 +7,5 @@ node :message do
 end
 
 node :data do
-  partial("api/shared/issue_detail", :object => @issue )
+  partial("api/shared/issue", :object => @issue )
 end

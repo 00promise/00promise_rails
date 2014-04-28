@@ -19,5 +19,7 @@ class Versus < ActiveRecord::Base
   attr_accessible :votes_r_count
 
   has_many :replies, as: :replyable, dependent: :destroy
-
+  def best_replies
+    self.replies.where("agree_cnt >= 10").order("agree_cnt DESC").limit(3)
+  end
 end

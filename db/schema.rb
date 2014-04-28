@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140423012632) do
+ActiveRecord::Schema.define(:version => 20140423080754) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -57,10 +57,10 @@ ActiveRecord::Schema.define(:version => 20140423012632) do
 
   create_table "issues", :force => true do |t|
     t.string   "title"
-    t.integer  "replies_count"
-    t.integer  "issue_type"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "replies_count", :default => 0
+    t.integer  "issue_type",    :default => 0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.integer  "politician_id"
   end
 
@@ -135,6 +135,12 @@ ActiveRecord::Schema.define(:version => 20140423012632) do
     t.integer  "grade"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "re_replies", :force => true do |t|
+    t.integer  "reply_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "replies", :force => true do |t|

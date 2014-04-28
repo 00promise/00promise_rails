@@ -8,8 +8,8 @@ node :politician_r do |versus|
   partial("api/shared/politician", :object => versus.politician_r)
 end
 
-if params[:action] == 'show'
-    node :replies do |versus|
-      partial("api/shared/reply", :object => versus.replies)
-    end
-end
+#if params[:action] == 'show'
+#    node :replies do |versus|
+#      partial("api/shared/reply", :object => versus.replies)
+#    end
+#end

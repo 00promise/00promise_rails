@@ -1,4 +1,3 @@
-# deprecated - 안씀 replies.json.rabl 로 통일
 node :code do
   @code
 end

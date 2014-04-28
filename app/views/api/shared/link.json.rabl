@@ -1,0 +1,1 @@
+attributes :press, :title, :url

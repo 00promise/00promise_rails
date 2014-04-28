@@ -7,5 +7,7 @@ class AddPolymorphicToReply < ActiveRecord::Migration
 
     add_column :manifestos, :replies_count, :integer, null: false, default: 0
     add_column :versus, :replies_count, :integer, null: false, default: 0
+    add_column :replies, :replies_count, :integer, null: false, default: 0
+    add_column :replies, :reply_score, :integer, null: false, default: 0
   end
 end
