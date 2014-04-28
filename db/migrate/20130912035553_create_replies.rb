@@ -4,7 +4,7 @@ class CreateReplies < ActiveRecord::Migration
       t.integer :manifesto_id
       t.integer :user_id
       t.string :status,         default: "normal", limit: 10
-      t.text :content
+      t.text :content, default: ""
       t.integer :agree_cnt,     default: 0
       t.integer :disagree_cnt,  default: 0
 

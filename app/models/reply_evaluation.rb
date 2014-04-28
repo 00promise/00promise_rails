@@ -15,11 +15,13 @@ private
   EVAL_TYPE_MAP = { "A" => :agree_cnt, "D" => :disagree_cnt }
 
   def after_create
+    self.reply.calculate_score
     self.reply.increment_with_sql!(EVAL_TYPE_MAP[self.eval_type])
   end
 
   def after_update
     if self.eval_type_changed?
+      self.reply.calculate_score
       before_eval_type, after_eval_type = self.eval_type_change
       self.reply.decrement_with_sql!(EVAL_TYPE_MAP[before_eval_type])
       self.reply.increment_with_sql!(EVAL_TYPE_MAP[after_eval_type])
@@ -27,6 +29,7 @@ private
   end
 
   def after_destroy
+    self.reply.calculate_score
     self.reply.decrement_with_sql!(EVAL_TYPE_MAP[self.eval_type])
   end
 end

@@ -14,7 +14,7 @@ mysql: &mysql
 
 development:
   <<: *mysql
-  database: 00promise00
+  database: 00promise00_test
   pool: 5
 
 # Warning: The database defined as "test" will be erased and

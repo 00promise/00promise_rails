@@ -1,7 +1,21 @@
 class Api::BaseController < ApplicationController
   before_filter :init_api
   # prepend_before_filter :get_auth_token
-
+  if ENV['RAILS_ENV'] == 'production'
+    rescue_from Exception do |exception|
+      if params[:format] == "json"
+        @code = CODE_FAIL
+        if exception.class == ActiveRecord::RecordNotFound
+          @message = "발견되지 않은 리소스입니다."
+        elsif exception.class == ActionController::RoutingError
+          @message = "발견되지 않는 리소스 접근 입니다."
+        else
+          @message = "알수없는 에러 입니다."
+        end
+        render_error
+      end
+    end
+  end
 protected
 
   def auth_user
