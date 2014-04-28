@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1233681554">
+    <data-source source="LOCAL" name="Rails 00promise_rails: development" uuid="6b55f171-3883-483b-a8e2-2bd3f41dbb57">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://211.110.130.122:3306/00promise00_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9adf9adfdadfd8dfc5dfc7dfc3dfd9dfcfdf9adf9a</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails 00promise_rails: production" uuid="034cb720-1e27-4f18-b927-2d699bdf6d65">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://211.110.130.122:3306/00promise00</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9adf9adfdadfd8dfc5dfc7dfc3dfd9dfcfdf9adf9a</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
