@@ -10,7 +10,7 @@ class Api::ManifestosController < Api::BaseController
   # inlcudes 쿼리캐싱 - 평균 600ms 쿼리를 80 쿼리로 단축 
   # GET /api/manifestos/daily.json
   def daily
-    @manifestos = Manifesto.includes(replies: [:user]).includes(winner: [politician: [:position, :party] ]).order("replies_count DESC").order('replies.agree_cnt DESC').limit(10)
+    @manifestos = Manifesto.includes(replies: [:user]).includes(winner: [politician: [:position, :party] ]).order("replies.replies_count DESC").order('replies.agree_cnt DESC').limit(10)
   end
 
   # GET /api/manifestos/politician/:id.json
