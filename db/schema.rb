@@ -59,9 +59,9 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
     t.string   "title"
     t.integer  "replies_count", :default => 0
     t.integer  "issue_type",    :default => 0
+    t.integer  "politician_id"
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
-    t.integer  "politician_id"
   end
 
   create_table "links", :force => true do |t|
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
     t.integer  "winner_id"
     t.string   "title"
     t.text     "description"
+    t.integer  "reply_cnt",     :default => 0
     t.integer  "good_cnt",      :default => 0
     t.integer  "fair_cnt",      :default => 0
     t.integer  "poor_cnt",      :default => 0
@@ -107,17 +108,17 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
   create_table "politicians", :force => true do |t|
     t.string   "name"
     t.date     "birthday"
-    t.integer  "party_id",         :default => 1
+    t.integer  "party_id",                       :default => 1
     t.text     "memo"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
     t.string   "img_file_name"
     t.string   "img_content_type"
     t.integer  "img_file_size"
     t.string   "bg_img_file_name"
     t.string   "bg_content_type"
     t.integer  "bg_file_size"
-    t.integer  "age"
+    t.string   "age",              :limit => 11
     t.string   "address"
     t.string   "academic"
     t.string   "history"
@@ -147,12 +148,6 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "re_replies", :force => true do |t|
-    t.integer  "reply_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "replies", :force => true do |t|
     t.integer  "manifesto_id"
     t.integer  "user_id"
@@ -164,6 +159,8 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
     t.datetime "updated_at",                                         :null => false
     t.integer  "replyable_id"
     t.string   "replyable_type"
+    t.integer  "replies_count",                :default => 0,        :null => false
+    t.integer  "reply_score",                  :default => 0,        :null => false
   end
 
   add_index "replies", ["replyable_id"], :name => "index_replies_on_replyable_id"
@@ -231,8 +228,8 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
     t.integer  "votes_l_count",       :default => 0,                     :null => false
     t.integer  "votes_r_count",       :default => 0,                     :null => false
     t.integer  "replies_cnt",         :default => 0,                     :null => false
-    t.datetime "start_date",          :default => '2014-04-23 01:14:46', :null => false
-    t.datetime "end_date",            :default => '2014-04-23 01:14:46', :null => false
+    t.datetime "start_date",          :default => '2014-08-29 06:28:08', :null => false
+    t.datetime "end_date",            :default => '2014-08-29 06:28:08', :null => false
     t.boolean  "versus",              :default => false
     t.boolean  "visible",             :default => false
     t.boolean  "boolean",             :default => false
