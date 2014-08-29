@@ -34,13 +34,23 @@ Promise::Application.routes.draw do
     post "ratings/destroy"
 
     get "replies/manifesto/:id", to: "replies#manifesto"
+    get "replies/:type/:id", to: "replies#index"
+
     post "replies/create"
     post "replies/destroy"
-    # post "replies/report"
 
     post "reply_evaluations/create"
+    post "reply_evaluations/update"
+    post "reply_evaluations/destroy"
 
     post "reply_reports/create"
+
+    get "versus", to: "versus#index"
+    get "versus/:id", to: "versus#show"
+    post "versus/:id/vote", to: "versus#vote"
+
+    get "issues", to: "issues#index"
+    get "issues/:id", to: "issues#show"
   end
 
   resources :parties

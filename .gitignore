@@ -2,6 +2,7 @@
 *.sassc
 .sass-cache
 capybara-*.html
+.idea
 .rspec
 /.bundle
 /vendor/bundle
@@ -15,3 +16,5 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 .DS_Store
+/doc/
+/public/system/

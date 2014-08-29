@@ -25,6 +25,7 @@ gem 'jquery-rails', "< 3.0.0"
 
 # for admin
 gem 'activeadmin'
+gem 'active_enum'
 gem 'draper', ' >= 1.1.0'
 gem 'fog'
 gem "paperclip", "~> 3.0"

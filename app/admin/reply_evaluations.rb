@@ -15,7 +15,7 @@ ActiveAdmin.register ReplyEvaluation do
       link_to reply_eval.id, admin_reply_evaluation_path(reply_eval)
     end
     column :reply do |reply_eval|
-      link_to reply_eval.reply.content, admin_reply_path(reply_eval.reply)
+      link_to reply_eval.reply.content, admin_reply_path(reply_eval.reply) if reply_eval.reply.present?
     end
     column :user
     column :eval_type
@@ -27,7 +27,7 @@ ActiveAdmin.register ReplyEvaluation do
     attributes_table do
         row :id
         row :reply do
-          link_to reply_evaluation.reply.content, admin_reply_path(reply_evaluation.reply)
+          link_to reply_evaluation.reply.content, admin_reply_path(reply_evaluation.reply) if reply_eval.reply.present?
         end
         row :user
         row :eval_type

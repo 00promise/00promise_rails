@@ -211,7 +211,8 @@ ActiveAdmin.setup do |config|
       menu.add :label => "유저 관리", :priority => 1
       menu.add :label => "정치인 관리", :priority => 2
       menu.add :label => "공약 관리", :priority => 3
-      menu.add :label => "리플&평가", :priority => 4
+      menu.add :label => "배틀&핫이슈", :priority => 4
+      menu.add :label => "리플&평가", :priority => 5
     end
     Draper::CollectionDecorator.delegate :reorder, :page, :current_page, :total_pages, :limit_value, :total_count, :num_pages
   end

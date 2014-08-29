@@ -55,16 +55,34 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
     t.datetime "updated_at",                   :null => false
   end
 
+  create_table "issues", :force => true do |t|
+    t.string   "title"
+    t.integer  "replies_count", :default => 0
+    t.integer  "issue_type",    :default => 0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "politician_id"
+  end
+
+  create_table "links", :force => true do |t|
+    t.string   "title"
+    t.string   "press"
+    t.integer  "issue_id"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "manifestos", :force => true do |t|
     t.integer  "winner_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "reply_cnt",   :default => 0
-    t.integer  "good_cnt",    :default => 0
-    t.integer  "fair_cnt",    :default => 0
-    t.integer  "poor_cnt",    :default => 0
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.integer  "good_cnt",      :default => 0
+    t.integer  "fair_cnt",      :default => 0
+    t.integer  "poor_cnt",      :default => 0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "replies_count", :default => 0, :null => false
   end
 
   create_table "my_districts", :force => true do |t|
@@ -129,16 +147,27 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
     t.datetime "updated_at",   :null => false
   end
 
+  create_table "re_replies", :force => true do |t|
+    t.integer  "reply_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "replies", :force => true do |t|
     t.integer  "manifesto_id"
     t.integer  "user_id"
-    t.string   "status",       :limit => 10, :default => "normal"
+    t.string   "status",         :limit => 10, :default => "normal"
     t.text     "content"
-    t.integer  "agree_cnt",                  :default => 0
-    t.integer  "disagree_cnt",               :default => 0
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
+    t.integer  "agree_cnt",                    :default => 0
+    t.integer  "disagree_cnt",                 :default => 0
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.integer  "replyable_id"
+    t.string   "replyable_type"
   end
+
+  add_index "replies", ["replyable_id"], :name => "index_replies_on_replyable_id"
+  add_index "replies", ["replyable_type"], :name => "index_replies_on_replyable_type"
 
   create_table "reply_evaluations", :force => true do |t|
     t.integer  "reply_id"
@@ -190,6 +219,37 @@ ActiveRecord::Schema.define(:version => 20140829042035) do
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "versus", :force => true do |t|
+    t.string   "title",                                                  :null => false
+    t.text     "description"
+    t.string   "bg_img_file_name"
+    t.string   "bg_img_content_type"
+    t.integer  "bg_img_file_size"
+    t.datetime "bg_img_updated_at"
+    t.integer  "votes_count",         :default => 0,                     :null => false
+    t.integer  "votes_l_count",       :default => 0,                     :null => false
+    t.integer  "votes_r_count",       :default => 0,                     :null => false
+    t.integer  "replies_cnt",         :default => 0,                     :null => false
+    t.datetime "start_date",          :default => '2014-04-23 01:14:46', :null => false
+    t.datetime "end_date",            :default => '2014-04-23 01:14:46', :null => false
+    t.boolean  "versus",              :default => false
+    t.boolean  "visible",             :default => false
+    t.boolean  "boolean",             :default => false
+    t.integer  "politician_l_id",                                        :null => false
+    t.integer  "politician_r_id",                                        :null => false
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
+    t.integer  "replies_count",       :default => 0,                     :null => false
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "versus_id"
+    t.integer  "user_id"
+    t.integer  "vote_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "winners", :force => true do |t|
     t.integer  "election_id"
