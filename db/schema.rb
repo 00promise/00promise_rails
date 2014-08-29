@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131005130637) do
+ActiveRecord::Schema.define(:version => 20140829042035) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -99,6 +99,16 @@ ActiveRecord::Schema.define(:version => 20131005130637) do
     t.string   "bg_img_file_name"
     t.string   "bg_content_type"
     t.integer  "bg_file_size"
+    t.integer  "age"
+    t.string   "address"
+    t.string   "academic"
+    t.string   "history"
+    t.integer  "property"
+    t.string   "military"
+    t.integer  "payment"
+    t.integer  "arrears"
+    t.integer  "now_arrears"
+    t.string   "crime"
   end
 
   create_table "positions", :force => true do |t|

@@ -1,0 +1,33 @@
+require 'net/http'
+require 'open-uri'
+require 'json'
+
+politician_arr = Politician.all
+
+politician_arr.each do |politician|
+  name = politician.name
+  url_str = URI::encode("http://54.178.192.145:3000/candidateSearch/#{name}")
+
+  url = URI.parse(url_str)
+  req = Net::HTTP::Get.new(url.to_s)
+  res = Net::HTTP.start(url.host, url.port) {|http|
+    http.request(req)
+  }
+
+  json = JSON.parse(res.body)
+  json.each do |p_json|
+    #p p_json["experience"].join(",")
+    politician.age = p_json["age"].to_i
+    politician.address = p_json["address"]
+    politician.academic = p_json["education"]
+    politician.history = p_json["experience"].join(",")
+    politician.property = p_json["asset"].to_i
+    politician.military = p_json["military"]
+    politician.payment = p_json["tax1"].to_i
+    politician.arrears = p_json["tax2"].to_i
+    politician.now_arrears = p_json["tax3"].to_i
+    politician.crime = p_json["criminal"]
+    politician.save!
+  end
+end
+

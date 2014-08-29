@@ -42,6 +42,16 @@ ActiveAdmin.register Politician do
   			row :img_html
     		row :bg_img_html
  		    row :memo
+        row :age
+        row :address
+        row :academic
+        row :history
+        row :property
+        row :military
+        row :payment
+        row :arrears
+        row :now_arrears
+        row :crime
     end
   end
 end
