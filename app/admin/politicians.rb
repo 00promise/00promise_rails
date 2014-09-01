@@ -41,6 +41,16 @@ ActiveAdmin.register Politician do
   			row :party
   			row :img_html
     		row :bg_img_html
+        panel 'Profile' do
+          table_for politician.winners do
+            column "Winner" do |winner|
+              str = ""
+              str = "(현직)" if winner.present == true
+              str += "#{winner.election.name} - #{winner.position.name}"
+            end
+          end
+        end
+
  		    row :memo
         row :age
         row :address
