@@ -1,15 +1,32 @@
-U2FsdGVkX19UzYSu2DzTkOQcfKnkzLxXGEhSYmvVHKsmbEJ/Ka63tKQ99hb4Jw2M
-yt8gQw+XHTqoyteHHQLaX0lan+7328wxlVkmzY2R11xe88ZTZQtfcFzeqn1hT3u2
-HMXsYtxnceTrh3EDNfW51Q88B4MsCjwOiIjuzBrJ0l5hZzd86evvkeUgV76+NsWb
-Aque3TBCfhc68gVGRAItADzvh2SR4aH2J/118EGbGG8cszcHisupM/HgCOZTjUV4
-rHW1J6bmptDHxx4RZ1y4se9U58StdsVQvf45N2tMzYxOTDt5WxFcGxKvGqwfXT6n
-g8vtMzMbv3fAicBfs59aoT7U5S2Nmc/3r/yAf0RlCz3G2AX6PNSZ8EM5AFbjlTfn
-JoWsfovoTi/aLHVQ40MqnX4lyRKzRpu8fn+T4bcQHXb9ANm+7a6MYtvWGuzLs/AU
-rtdHPt/NX57xpgA2Ox0I++W+xCosQtljMLnyCmdj+3eB46rg5ChXR7izMQOnHUNk
-S5UANjAUjd+JAhbj8/l6oqi02+kefI1Pd52UBF+OZKTQZBJZxi7LvsJltaeMPc65
-ab2mHW7JMBP2phko9XBZKrrDeEOWB9RzAvAKJPFHSrDGU/agjRoc2ORn6qhaW9Va
-AIs0dhGfdToORFFa74vffo/4o7FfTUvSStvZoCfclbe8zTjcoKxCbm/IyuAA5bFf
-Mi6pimQjbSO+iTKo6OGHHHyfNl7TNGdQN1gLWrwhPNEx5XnArE2u1CEWHIsDRdIH
-2xAcTj7Bg7Sl1M51mzFmZ6o2+O4swSRAe2QBVGBwN+o/txxUqa6VZsLE1JkUD5fy
-d2/6X5sv7ixDK/yakh7tO1oSxknDKw7CGHN7cGejznTO6lMBAX7kpMHoBTxCLAfI
-WXBGvnst2tTRADPwR5ciiQ==
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+mysql: &mysql
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  host: 211.110.130.122
+  port: 3306
+  username: root
+  password: 00promise00
+
+development:
+  <<: *mysql
+  database: 00promise00_test2
+  pool: 5
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  <<: *mysql
+  database: 00promise00_test2
+  pool: 5

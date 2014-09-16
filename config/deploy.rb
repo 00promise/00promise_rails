@@ -30,6 +30,12 @@ after 'deploy:restart', 'unicorn:restart'  # app preloaded
 set :default_environment, {
   'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 }
+# namespace :deploy do
+#   namespace :assets do
+#     task :precompile do
+#     end
+#   end
+# end
 # cap unicorn:start
 # cap unicorn:stop
 # cap unicorn:reload
@@ -48,3 +54,4 @@ set :default_environment, {
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
+#bundle exec unicorn -c /srv/current/config/unicorn.rb -E production -D
