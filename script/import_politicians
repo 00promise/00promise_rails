@@ -1,6 +1,6 @@
 require 'csv'
 
-csv_text = "script/politicians.csv"
+csv_text = "script/politicians_6region.csv"
 CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converters => :all) do |row|
   h = row.to_hash
   puts "**************************************************"
@@ -21,6 +21,9 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
 
 
   # 현재 정당정보 id 확인
+  if h[:party_name1].nil?
+    h[:party_name1] = "무소속"
+  end
   if h[:party_name1].include?("무소속")
     party1_id = 1
   elsif h[:party_name1].include?("새누리")
@@ -34,6 +37,9 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
 
 
   # 당선 정당정보 id 확인
+  if h[:party_name2] == "" or h[:party_name2].nil?
+    h[:party_name2] = h[:party_name1]
+  end
   if h[:party_name2].include?("무소속")
     party2_id = 1
   elsif h[:party_name2].include?("새누리")
@@ -51,7 +57,7 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
   elsif h[:party_name2].include?("국민중심")
     party2_id = 9
   else
-    party2_id = 10
+    party2_id = 1
   end
   # puts party2_id
 
@@ -70,8 +76,12 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
 
 
   # 정치인 정보 저장
-  politician = Politician.new
-  politician.id = h[:id].to_s[6..-1].to_i
+  #politician = Politician.new
+  politician = Politician.find_by_name(h[:name])
+  if politician.nil?
+    politician = Politician.new
+  end
+  #politician.id = h[:id].to_s[6..-1].to_i
   politician.name = h[:name]
   politician.birthday = h[:birthday]
   politician.party_id = party1_id
@@ -81,7 +91,10 @@ CSV.foreach(csv_text, :headers => true, :header_converters => :symbol, :converte
 
 
   # 당선 정보 저장
-  winner = Winner.new
+  winner = Winner.where(:election_id => election_id, :position_id => position.id, :politician_id => politician.id).first
+  if winner.nil?
+    winner = Winner.new
+  end
   winner.election_id = election_id
   winner.position_id = position.id
   winner.politician_id = politician.id
