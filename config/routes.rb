@@ -3,6 +3,7 @@ Promise::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+
   namespace :api do
     devise_scope :user do
       post "users/sign_up", to: "users/registrations#create"

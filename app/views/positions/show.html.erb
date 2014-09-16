@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @position.name %>
+</p>
+
+<p>
+  <b>Type name:</b>
+  <%= @position.type_name %>
+</p>
+
+<p>
+  <b>Type code:</b>
+  <%= @position.type_code %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @position.district %>
+</p>
+
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>
