@@ -24,17 +24,17 @@ end
 gem 'jquery-rails', "< 3.0.0"
 
 # for admin
-gem 'activeadmin'
-gem 'active_enum'
+gem 'activeadmin', " < 0.6.1"
+gem 'active_enum', " < 0.9.13"
 gem 'draper', ' >= 1.1.0'
-gem 'fog'
+gem 'fog', "< 1.15.1"
 gem "paperclip", "~> 3.0"
 
 gem 'capistrano'
 group :development do
   gem 'capistrano-unicorn', :require => false
 end
-gem 'mysql2'
+
 gem 'oj'
 gem 'rabl'
 gem 'rack-ssl-enforcer'
