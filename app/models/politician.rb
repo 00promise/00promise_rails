@@ -10,6 +10,8 @@ class Politician < ActiveRecord::Base
   has_many :manifestos, through: :winners
   accepts_nested_attributes_for :manifestos
   attr_accessible :manifestos_attributes
+
+  has_many :links, dependent: :destroy
   # has_attached_file :avatar,
   #     :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
   #     :url => "/system/:attachment/:id/:style/:filename"
@@ -25,4 +27,6 @@ class Politician < ActiveRecord::Base
       :url => "http://00promise.org/system/:attachment/:id/:style/:filename"
 
   validates :birthday, presence: true
+
+  default_scope order('name ASC')
 end

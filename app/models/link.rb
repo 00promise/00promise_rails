@@ -1,5 +1,6 @@
 class Link < ActiveRecord::Base
-  attr_accessible :issue, :press, :title, :url, :issue_id
+  attr_accessible :press, :title, :url, :politician_id
 
-  belongs_to :issue
+  has_one :issue, dependent: :destroy
+  belongs_to :politician
 end

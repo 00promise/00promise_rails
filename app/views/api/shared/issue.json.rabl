@@ -1,10 +1,6 @@
-attributes :id, :replies_count, :title, :issue_type
+attributes :id, :title
 
-node :politician do |issue|
-  partial("api/shared/politician", :object => issue.politician)
+node :link do |i|
+  partial("api/shared/link", :object => i.link)
 end
-#if params[:action] == 'show'
-  node :links do |issue|
-    partial("api/shared/link", :object => issue.links)
-  end
-#end
+

@@ -3,7 +3,7 @@ class CreateLinks < ActiveRecord::Migration
     create_table :links, :options => 'ENGINE=InnoDB DEFAULT CHARSET=utf8' do |t|
       t.string :title
       t.string :press
-      t.references :issue
+      t.references :politician
       t.string :url
 
       t.timestamps

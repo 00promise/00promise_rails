@@ -43,6 +43,15 @@ ActiveAdmin.register Manifesto do
         link_to winner.politician.name, admin_politician_path(winner.politician)
       end
  		end
+    panel 'Link' do
+      table_for manifesto.links do
+        column "name" do |link|
+          links = ''.html_safe
+          links += link_to "#{link.title}", admin_link_path(reply)
+          links
+        end
+      end
+    end
  		panel 'Reply' do
       table_for manifesto.replies do
       	column "name" do |reply|
