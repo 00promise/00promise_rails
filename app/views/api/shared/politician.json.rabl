@@ -1,4 +1,4 @@
-attributes :id, :name, :img, :bg_img, :memo
+attributes :id, :name, :img, :bg_img, :memo, :current_age, :academic,  :history, :property, :military, :payment, :arrears, :now_arrears, :crime
 
 node :birthday do |p|
   p.birthday.to_time.to_i
