@@ -12,6 +12,8 @@ class Politician < ActiveRecord::Base
   attr_accessible :manifestos_attributes
 
   has_many :links, dependent: :destroy
+  has_many :replies, as: :replyable, dependent: :destroy
+
   # has_attached_file :avatar,
   #     :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
   #     :url => "/system/:attachment/:id/:style/:filename"

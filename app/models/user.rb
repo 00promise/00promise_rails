@@ -10,6 +10,11 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   has_many :ratings
 
+  attr_accessible :img
+  has_attached_file :img, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "http://00promise.org/img/default_image.png",
+      :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+      :url => "http://00promise.org/system/:attachment/:id/:style/:filename"
+
   class << self
     def current_user=(user)
       Thread.current[:current_user] = user

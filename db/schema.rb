@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140423010634) do
+ActiveRecord::Schema.define(:version => 20150130093501) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(:version => 20140423010634) do
     t.integer  "arrears"
     t.integer  "now_arrears"
     t.string   "crime"
+    t.integer  "replies_count"
   end
 
   create_table "positions", :force => true do |t|
@@ -197,8 +198,8 @@ ActiveRecord::Schema.define(:version => 20140423010634) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                  :default => ""
+    t.string   "encrypted_password",     :default => ""
     t.string   "authentication_token"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -210,6 +211,10 @@ ActiveRecord::Schema.define(:version => 20140423010634) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "social_id",              :default => ""
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true

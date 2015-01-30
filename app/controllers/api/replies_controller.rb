@@ -56,6 +56,8 @@ class Api::RepliesController < Api::BaseController
       reply_parent = Versus.find(params[:versus_id])
     elsif params[:issue_id]
       reply_parent = Issue.find(params[:issue_id])
+    elsif params[:politician_id]
+      reply_parent = Politician.find(params[:politician_id])
     elsif params[:reply_id]
       reply_parent = Reply.find(params[:reply_id])
     end
