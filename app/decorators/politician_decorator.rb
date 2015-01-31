@@ -9,8 +9,8 @@ class PoliticianDecorator < Draper::Decorator
   end
   def current_age
   	today = Date.today
-	d = Date.new(today.year, model.birthday.month, model.birthday.day)
-	age = d.year - model.birthday.year - (d > today ? 1 : 0)
-	age
+  	d = Date.new(today.year, model.birthday.month, model.birthday.day)
+  	age = d.year - model.birthday.year - (d > today ? 1 : 0)
+  	age
   end
 end

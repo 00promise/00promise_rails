@@ -6,7 +6,7 @@ class LinkDecorator < Draper::Decorator
       h.link_to model.url, model.url
     end
   end
-
+  
   private
   def handle_none(value)
     if value.present?

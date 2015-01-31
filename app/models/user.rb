@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :token_authenticatable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :nickname
   # attr_accessible :title, :body
   validates :password_confirmation, presence: true
   has_many :ratings
@@ -24,7 +24,13 @@ class User < ActiveRecord::Base
       Thread.current[:current_user]
     end
   end
-
+  def name
+    if self.nickname.nil?
+      self.email.split("@").first
+    else
+      self.nickname
+    end
+  end
   def masked_name
     name, domain = self.email.split("@")
 

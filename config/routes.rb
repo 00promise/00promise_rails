@@ -36,6 +36,7 @@ Promise::Application.routes.draw do
     post "ratings/destroy"
 
     get "replies/manifesto/:id", to: "replies#manifesto"
+    get "replies/politician/:id", to: "replies#politician"
     get "replies/:type/:id", to: "replies#index"
 
     post "replies/create"

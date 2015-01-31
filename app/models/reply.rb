@@ -2,7 +2,7 @@ class Reply < ActiveRecord::Base
   include Variation
   after_initialize :set_virtual_attributes
 
-  attr_accessible :agree_cnt, :content, :disagree_cnt, :manifesto_id, :status, :user_id, :replies_count, :reply_score
+  attr_accessible :agree_cnt, :content, :disagree_cnt, :manifesto_id, :status, :user_id, :replies_count, :reply_score, :created_at
   attr_accessor :is_best, :is_owner, :user_eval_type
 
   #belongs_to :manifesto, counter_cache: :reply_cnt

@@ -23,6 +23,21 @@ class Api::RepliesController < Api::BaseController
     end
     render "replies"
   end
+
+  def politician
+    count = params[:count] || 10
+    max_id = params[:max_id] || FIXNUM_MAX
+    order_col = "id"
+    if params[:order] == "1"
+      order_col = "replies_count"
+    end
+
+    @politician = Politician.find(params[:id])
+    @replies = @politician.replies.where("id < ?", max_id).order("#{order_col} DESC").limit(count)
+
+    render "replies"
+  end
+
   def index
     count = params[:count] || 20
     page = params[:page] || 1
